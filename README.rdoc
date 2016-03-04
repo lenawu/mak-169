@@ -5,5 +5,9 @@
 {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/issue_count.svg" />}[https://codeclimate.com/github/lenawu/mak-169]
 
 
+
+
+{<img src="https://travis-ci.org/travis-ci/travis-web.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/travis-ci/travis-web]
+
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

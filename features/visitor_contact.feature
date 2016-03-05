@@ -1,4 +1,3 @@
-@wip
 Feature: Visitors should be able to contact Mak
   
     As a visitor

@@ -1,4 +1,3 @@
-@wip
 Feature: students can view projects assigned to them
   
     As a student

@@ -1,8 +1,8 @@
-Feature: Administrator can View Student Projects
+Feature: Students can sign in
 
-	As an administrator
-	So I can view signed up students
-	I want to be able to view the student projects
+	As a student
+	So that I can log into a site account and work on projects
+	I want to be able to sign in with my email and password
 
 Background: User and Project Included on the Database
 
@@ -19,23 +19,14 @@ Background: User and Project Included on the Database
 
 	Given I am currently on the home page
 
-Scenario: Signing up
-	When I follow "Sign_Up"
-	When I fill in the following:
-    | first_name | last_name | email              | password
-    | F          | L         | email@berkeley.edu | password
-
-	And I click "Sign_Up"
-	Then I should see "First Last"
-
 Scenario: Signing in
-	When I sign in "email" and "password"
+	When I sign in with "email@berkeley.com" and "password"
 	Given I am currently on the activities page
 	Then I should see the following, First, Last, proj, project, rate
 	Then I should not see the following Second, Later
 
 Scenario: Signing out
-	When I sign in "email" with "password"
+	When I sign in with "email@berkeley.com" with "password"
 	Then I should see "First Last"
 	When I follow "Sign_Out"
 	Then I should currently be on the sign_in page

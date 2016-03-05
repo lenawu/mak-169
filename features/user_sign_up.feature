@@ -7,8 +7,8 @@ Feature: New users should be able to sign up
 Background: some users exist already
 
   Given the following users exist
-	  #| first_name | last_name | email              | password
-	  #| Jane       | Doe       | email@berkeley.edu | password
+	  | first_name | last_name | email              | password
+	  | Jane       | Doe       | email@berkeley.edu | password
 
 Scenario: Signing up
 	When I follow "Sign_Up"

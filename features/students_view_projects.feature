@@ -7,8 +7,8 @@ Feature: students can view projects assigned to them
 Background: projects in database
 
   Given the following projects exist:
-  #| title           | company            | description      |
-  #| A Cool Project  | Cool Projects Inc. | Build me a thing |
+  | title           | company            | description      |
+  | A Cool Project  | Cool Projects Inc. | Build me a thing |
 
 Scenario: view a list of projects assigned to me
   Given that I am signed up as a student

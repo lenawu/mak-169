@@ -9,9 +9,9 @@ Background: User and Project Included on the Database
 	Given it is currently Jan 1, 2016
 
 	Given the following users exist
-	#| first_name | last_name | email              | password
-	#| First      | Last      | email@berkeley.com | password
-    #| Second     | Later     | mail@berkeley.edu  | password
+	| first_name | last_name | email              | password
+	| First      | Last      | email@berkeley.com | password
+    | Second     | Later     | mail@berkeley.edu  | password
 
 	Given the following activities exist:
 	| title | type    | release_time              | rate | user_id

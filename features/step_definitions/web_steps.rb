@@ -21,11 +21,7 @@
 ## READ MEEEEE!!!!! 
 # when ready to use, delete the below given and uncomment the rest of the code
 
-Given /^/ do
-  pending
-end
 
-=begin
 require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
@@ -259,4 +255,3 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
-=end

@@ -1,4 +1,3 @@
-#@wip
 Feature: students can view projects assigned to them
   
     As a student
@@ -7,12 +6,12 @@ Feature: students can view projects assigned to them
 
 Background: projects in database
 
-  Given PENDING the following projects exist:
+  Given the following projects exist:
   #| title           | company            | description      |
   #| A Cool Project  | Cool Projects Inc. | Build me a thing |
 
 Scenario: view a list of projects assigned to me
-  Given PENDING that I am signed up as a student
+  Given that I am signed up as a student
   Given the project "A Cool Project" is assigned to me
   And  I follow "My projects"
   Then I should see "A Cool Project"

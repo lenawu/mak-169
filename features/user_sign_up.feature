@@ -1,3 +1,4 @@
+@wip
 Feature: New users should be able to sign up
   
     As a user

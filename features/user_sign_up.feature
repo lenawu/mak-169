@@ -1,4 +1,4 @@
-@wip
+#@wip
 Feature: New users should be able to sign up
   
     As a user
@@ -7,12 +7,12 @@ Feature: New users should be able to sign up
 
 Background: some users exist already
 
-  Given the following users exist
-	  | first_name | last_name | email              | password
-	  | Jane       | Doe       | email@berkeley.edu | password
+  Given PENDING the following users exist
+	  #| first_name | last_name | email              | password
+	  #| Jane       | Doe       | email@berkeley.edu | password
 
 Scenario: Signing up
-	When I follow "Sign_Up"
+	When PENDING I follow "Sign_Up"
 	When I fill in the following:
     | first_name | last_name | email              | password
     | Jon        | Doe       | email@gmail.com    | password
@@ -21,7 +21,7 @@ Scenario: Signing up
 	Then I should see "Jon Doe"
 	
 Scenario: Email already exists
-	When I follow "Sign_Up"
+	When PENDING I follow "Sign_Up"
 	When I fill in the following:
     | first_name | last_name | email              | password
     | First      | Last      | email@berkeley.edu | password
@@ -30,7 +30,7 @@ Scenario: Email already exists
 	Then I should see "Error: Email has already been registered"
 	
 Scenario: Missing field
-	When I follow "Sign_Up"
+	When PENDING I follow "Sign_Up"
 	When I fill in the following:
     | first_name | last_name | email              | password
     | First      | Last      |                    | password

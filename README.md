@@ -20,6 +20,23 @@ To make and submit changes:
 git checkout master
 git pull origin master
 ```
-2. Create a local branch and make changes
+2. Create a local branch and make changes, push commits to GitHub on new branch if you want
 ```
+git branch my-cool-changes
+git checkout my-cool-changes
+*** work work work ***
+git commit -am "Did something cool"
+git push origin my-cool-changes
+*** work work work repeat. when done, ***
+git fetch origin        # gets you up to date with origin
+git merge origin/master
+```
+3. Go to GitHub and switch to your branch. Click "Submit new pull request".
+4. If merge-able, Click "Create new pull request" or whatever.
+5. Click a button again to go through with the merge. Then click "Delete branch"
+6. Locally, delete your branch
+```
+git checkout master
+git branch -d my-cool-changes
+git pull origin master
 ```

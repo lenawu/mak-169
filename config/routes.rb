@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # rake routes to see all included devise paths
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

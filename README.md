@@ -42,5 +42,5 @@ git pull origin master
 ```
 
 ## Encountered local bugs
-* couldn't digest activesupport:stringinquirer
-  * Fix: delete tmp/cache/assets
+"couldn't digest activesupport:stringinquirer"
+* Fix: delete tmp/cache/assets

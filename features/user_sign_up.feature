@@ -1,4 +1,3 @@
-@wip
 Feature: New users should be able to sign up
   
     As a user
@@ -6,34 +5,42 @@ Feature: New users should be able to sign up
     I want to be able to create a new account
 
 Background: some users exist already
+  Given the following users exist:
+	| email              | password |
+	| email@berkeley.edu | password |
+  Given I am on the home page
 
-  Given the following users exist
-	  | first_name | last_name | email              | password
-	  | Jane       | Doe       | email@berkeley.edu | password
+Scenario: Signing in
+  When I follow "Sign In"
+  When I fill in the following:
+	| user[email]       | email@berkeley.edu  |
+	| user[password]    | password            |
+  And I press "Log in"
+  Then I should be on the home page
+  Then I should not see "Sign In"
+  Then I should not see "Sign Up"
+  Then I should see "Log Out"
 
-Scenario: Signing up
-	When I follow "Sign_Up"
-	When I fill in the following:
-    | first_name | last_name | email              | password
-    | Jon        | Doe       | email@gmail.com    | password
-
-	And I click "Sign_Up"
-	Then I should see "Jon Doe"
-	
 Scenario: Email already exists
-	When I follow "Sign_Up"
-	When I fill in the following:
-    | first_name | last_name | email              | password
-    | First      | Last      | email@berkeley.edu | password
-
-	And I click "Sign_Up"
-	Then I should see "Error: Email has already been registered"
+  When I follow "Sign Up"
+  When I fill in the following:
+	| user[email]       | email@berkeley.edu  |
+	| user[password]    | password            |
+  And I press "Sign up"
+	Then I should see "Email has already been taken"
 	
-Scenario: Missing field
-	When I follow "Sign_Up"
-	When I fill in the following:
-    | first_name | last_name | email              | password
-    | First      | Last      |                    | password
+Scenario: Missing field during a sign up
+	When I follow "Sign Up"
+  When I fill in the following:
+	| user[email]       |                     |
+	| user[password]    | password            |
+	And I press "Sign up"
+	Then I should see "Email can't be blank"
 
-	And I click "Sign_Up"
-	Then I should see "Error: Please fill in the following fields: email"
+Scenario: Missing field during a sign in
+	When I follow "Sign In"
+  When I fill in the following:
+	| user[email]       |                     |
+	| user[password]    | password            |
+	And I press "Log in"
+	Then I should see "Invalid email or password"

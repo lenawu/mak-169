@@ -29,6 +29,7 @@ git checkout my-cool-changes
 git commit -am "Did something cool"
 git push origin my-cool-changes
 *** work work work repeat. when done, ***
+# You don't have to do the next two git commands if you just wanna merge in GitHub (just skip if unsure).
 git fetch origin        # gets you up to date with origin
 git merge origin/master
 ```

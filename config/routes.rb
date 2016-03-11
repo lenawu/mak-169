@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'info/home'
+
+  get 'info/about'
+
+  get 'info/client'
+
+  get 'info/mentor'
+
+  get 'info/student'
+
+  get 'info/projects'
+
   # rake routes to see all included devise paths
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

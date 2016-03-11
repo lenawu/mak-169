@@ -3,6 +3,7 @@
 
 Group project for CS 169 Spring 2016
 
+[Code Climate](https://codeclimate.com/github/lenawu/mak-169)
 ![GPA](https://codeclimate.com/github/lenawu/mak-169/badges/gpa.svg)
 ![Coverage](https://codeclimate.com/github/lenawu/mak-169/badges/coverage.svg)
 ![Issue Count](https://codeclimate.com/github/lenawu/mak-169/badges/issue_count.svg)

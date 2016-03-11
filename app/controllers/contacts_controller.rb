@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     #mail(:to => params[:email], :subject => params[:message])
     @contact.request = request
-    if @contact.deliver
+    if @contact.valid?
       @contact.deliver
       flash.now[:error] = nil
       flash.now[:notice] = 'Thank you for your message!'

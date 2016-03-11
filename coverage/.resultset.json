@@ -49,41 +49,6 @@
         1,
         null
       ],
-      "/home/ubuntu/workspace/mak-169/app/controllers/contacts_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/mak-169/app/controllers/welcome_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/home/ubuntu/workspace/mak-169/app/models/contact_form.rb": [
         0,
         0,
@@ -122,6 +87,12 @@
         0,
         0
       ],
+      "/home/ubuntu/workspace/mak-169/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
       "/home/ubuntu/workspace/mak-169/app/mailers/user_mailer.rb": [
         0,
         0,
@@ -133,13 +104,42 @@
         0,
         0
       ],
-      "/home/ubuntu/workspace/mak-169/app/mailers/application_mailer.rb": [
+      "/home/ubuntu/workspace/mak-169/app/controllers/contacts_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/welcome_controller.rb": [
+        0,
+        0,
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1457735344
+    "timestamp": 1457737668
   }
 }

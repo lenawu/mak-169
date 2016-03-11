@@ -63,6 +63,7 @@ group :test do
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
+  gem 'codeclimate-test-reporter', require: false
   
   # Basic imperative step defs
   
@@ -79,6 +80,4 @@ group :production do
   # Heroku specific production settings
   gem 'rails_12factor'
 end
-
-gem "codeclimate-test-reporter", group: :test, require: nil
 

@@ -34,6 +34,17 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+# Our custom step definitions
+
+Given /the following users exist:/ do |users_table|
+  users_table.hashes.each do |user|
+    # each returned element will be a hash whose key is the table header.
+    User.create(user)
+  end
+end
+
+# End of custom step definitions
+
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
   with_scope(parent) { When step }
@@ -81,7 +92,7 @@ end
 #
 When /^(?:|I )fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
-    When %{I fill in "#{name}" with "#{value}"}
+    step %{I fill in "#{name}" with "#{value}"}
   end
 end
 

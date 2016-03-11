@@ -3,9 +3,11 @@
 
 Group project for CS 169 Spring 2016
 
-<img src="https://codeclimate.com/github/lenawu/mak-169/badges/gpa.svg" />
-<img src="https://codeclimate.com/github/lenawu/mak-169/badges/coverage.svg" />
-<img src="https://codeclimate.com/github/lenawu/mak-169/badges/issue_count.svg" />
+![GPA](https://codeclimate.com/github/lenawu/mak-169/badges/gpa.svg)
+![Coverage](https://codeclimate.com/github/lenawu/mak-169/badges/coverage.svg)
+![Issue Count](https://codeclimate.com/github/lenawu/mak-169/badges/issue_count.svg)
   
-<a href="https://travis-ci.org/lenawu/mak-169">travis-ci</a> <img src="https://travis-ci.org/lenawu/mak-169.svg?branch=master" alt="Build Status" />
+[Travis-CI](https://travis-ci.org/lenawu/mak-169)
+![Build Status](https://travis-ci.org/lenawu/mak-169.svg?branch=master)
   
+[Pivotal Tracker](https://www.pivotaltracker.com/n/projects/154264)

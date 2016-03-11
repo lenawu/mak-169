@@ -18,6 +18,9 @@
 # * http://elabs.se/blog/15-you-re-cuking-it-wrong
 #
 
+## READ MEEEEE!!!!! 
+# when ready to use, delete the below given and uncomment the rest of the code
+
 
 require 'uri'
 require 'cgi'

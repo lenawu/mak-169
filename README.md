@@ -31,6 +31,7 @@ git push origin my-cool-changes
 git fetch origin        # gets you up to date with origin
 git merge origin/master
 ```
+* git merge may open nano. Just ctrl-X to exit and finish the merge.
 3. Go to GitHub and switch to your branch. Click "Submit new pull request".
 4. If merge-able, Click "Create new pull request" or whatever.
 5. Click a button again to go through with the merge. Then click "Delete branch"

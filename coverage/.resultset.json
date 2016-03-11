@@ -1,0 +1,59 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/home/ubuntu/workspace/mak-169/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/info_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/info_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/welcome_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1457721417
+  }
+}

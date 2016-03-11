@@ -18,8 +18,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'welcome#index'
-  
   #get 'contact' => 'contact#new'
   resources "contacts", only: [:new, :create]
   # Example of regular route:

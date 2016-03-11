@@ -10,4 +10,4 @@ Group project for CS 169 Spring 2016
 [Travis-CI](https://travis-ci.org/lenawu/mak-169)
 ![Build Status](https://travis-ci.org/lenawu/mak-169.svg?branch=master)
   
-[Pivotal Tracker](https://www.pivotaltracker.com/n/projects/154264)
+[Pivotal Tracker](https://www.pivotaltracker.com/n/projects/1542641)

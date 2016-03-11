@@ -1,4 +1,3 @@
-
 .container
   %h1 Contact
   = simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f|
@@ -10,4 +9,3 @@
       = f.input :nickname, :hint => 'Leave this field blank!'
     .form-actions
       = f.button :submit, 'Send message', :class=> "btn btn-primary"
-  

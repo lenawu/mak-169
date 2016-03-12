@@ -41,5 +41,3 @@ exclude_paths:
 - vendor/
 - coverage/
 - app/mailers/*
-- app/controllers/welcome_controller.rb
-- app/model/contact_form.rb

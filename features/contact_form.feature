@@ -40,3 +40,10 @@ Scenario: Contact page should have name, message, and message fields
    And I fill in "Message" with "Why is it raining?"
    And I press "Send message"
    Then it should send me an e-mail
+  
+ Scenario: Contact Form can be created
+   Given a contact form with headers is initialized
+ 
+ Scenario: User Mailer can be created
+   Given user mail is created
+   

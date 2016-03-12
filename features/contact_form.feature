@@ -32,4 +32,11 @@ Scenario: Contact page should have name, message, and message fields
    And I fill in "Email" with "notemail"
    And I press "Send message"
    Then I should see "invalid"
-  
+   
+ Scenario: It should send the email
+   Given I am on the contact page
+   When I fill in "Name" with "Pikachu"
+   And I fill in "Email" with "attong@berkeley.edu"
+   And I fill in "Message" with "Why is it raining?"
+   And I press "Send message"
+   Then it should send me an e-mail

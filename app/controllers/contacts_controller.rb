@@ -3,11 +3,11 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
   
-  def send_signup_email(user)
-    @user = user
-    mail( :to => @user.email,
-    :subject => 'Thanks for signing up for our amazing app' )
-  end
+#  def send_signup_email(user)
+#    @user = user
+#    mail( :to => @user.email,
+#    :subject => 'Thanks for signing up for our amazing app' )
+#  end
   
   def create
     @contact = Contact.new(params[:contact])

@@ -47,3 +47,5 @@ git pull origin master
 ## Encountered local bugs
 "couldn't digest activesupport:stringinquirer"
 * Fix: delete tmp/cache/assets
+"Address already in use - bind(2) for 0.0.0.0:8080"
+* Fix: run 'fuser -k 8080/tcp'

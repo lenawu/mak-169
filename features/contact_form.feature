@@ -45,5 +45,5 @@ Scenario: Contact page should have name, message, and message fields
    Given a contact form with headers is initialized
  
  Scenario: User Mailer can be created
-   Given user mail is created
+   Given user mail is created and sent
    

@@ -8,7 +8,7 @@ Given /^a contact form with headers is initialized$/ do
   headers = form.headers
 end
 
-Given /^user mail is created$/ do
-  @user = User.new({:email => "steven@test.com", :password => "password"})
-  mail = UserMailer.welcome_email(@user)
+Given /^user mail is created and sent$/ do
+  @user = User.new({:email => "test@test.test", :password => "password"})
+  mail = UserMailer.welcome_email(@user).deliver_now
 end

@@ -40,8 +40,8 @@ git merge origin/master
 6. Locally, delete your branch
 ```
 git checkout master
-git branch -d my-cool-changes
 git pull origin master
+git branch -d my-cool-changes
 ```
 
 ## Encountered local bugs

@@ -43,6 +43,19 @@ Given /the following users exist:/ do |users_table|
   end
 end
 
+Given /the following projects exist:/ do |projects_table|
+  fail "Unimplemented"
+end
+
+Given /^(?:|I ) sign in with "([^"]*)" and "([^"]*)"$/ do |email, password|
+  fail "Unimplemented"
+end
+
+Given /the project assigned to me is "(.*?)"/ do |project|
+  fail "Unimplemented"
+end
+
+
 # End of custom step definitions
 
 # Single-line step scoper

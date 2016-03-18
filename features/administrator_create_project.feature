@@ -1,9 +1,9 @@
 @wip
-Feature: Administrators should be able to create new projects
+Feature: Administrator can create projects for students to do
   
-  As an administrator,
-  So that my students can view and work on projects,
-  I want to be able to match company projects with students
+  As an administrator
+  So that I can have students collaborate on projects
+  I want to be able to create projects given to me by clients
   
 Background: Users that exist
     
@@ -29,3 +29,16 @@ Scenario: Fail to create a project as a Student
   Given I am on the dashboard
   When I follow "New Project"
   Then I should see "You are not authorized to create a new project"
+  
+Scenario: Create a project with students
+    Given I sign in with "email@berkeley.com" and "password"
+    Given I am on the dashboard
+    When I follow "Projects"
+    Then I should see "Create Project Group"
+    Then I fill in "Project" with "A Cool Project"
+    Then I fill in "Company Name" with "CoolProjects.inc"
+    Then I fill in "Student" with "Second Last"
+    Then I follow "Submit"
+    Then I should see "A Cool Project"
+    When I follow "A Cool Project"
+    Then I should see "Second Last"

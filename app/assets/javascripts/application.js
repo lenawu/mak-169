@@ -14,9 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require bootstrap
-//= require modernizr
-//= require scripts
-//= require waypoints.min.js
 //= require contacts
 //= require info

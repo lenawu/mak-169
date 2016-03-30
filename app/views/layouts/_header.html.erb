@@ -1,7 +1,9 @@
 		<header>
 			<div class="container">
 				<div class="row">
-					<div class="responsive-logo"></div>
+				  <%= link_to root_path do %>
+					  <div class="responsive-logo"></div>
+					<% end %>
 					<div class="pullcontainer">
 						<a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>
 					</div>
@@ -9,7 +11,9 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<nav>
-							<div class="logo-holder"></div>
+						  <%= link_to root_path do %>
+					      <div class="logo-holder"></div>
+				    	<% end %>
 							<ul class="clearfix">
 							  <% if user_signed_in? %>
                   <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "page-link" %></li>

@@ -44,7 +44,17 @@ Given /the following users exist:/ do |users_table|
 end
 
 Given /the following projects exist:/ do |projects_table|
-  fail "Unimplemented"
+  projects_table.hashes.each do |project|
+    # each returned element will be a hash whose key is the table header.
+    Project.create(project)
+  end
+end
+
+Given /the following companies exist:/ do |companies_table|
+  companies_table.hashes.each do |company|
+    # each returned element will be a hash whose key is the table header.
+    Company.create(company)
+  end
 end
 
 Given /^(?:|I ) sign in with "([^"]*)" and "([^"]*)"$/ do |email, password|

@@ -1,6 +1,6 @@
 class Company < ActiveRecord::Base
     
-    has_many :projects, dependent: :destroy
+    #has_many :projects, dependent: :destroy
     
     #has many projects
     attribute :name,      :validate => true

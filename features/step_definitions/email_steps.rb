@@ -1,6 +1,6 @@
 Then /^it should send me an e\-mail$/ do 
   @email = ActionMailer::Base.deliveries.last
-  @email.to.should include "mina.han@gmail.com"
+  @email.to.should include "ankita@makelabs.org"
 end
 
 Given /^a contact form with headers is initialized$/ do

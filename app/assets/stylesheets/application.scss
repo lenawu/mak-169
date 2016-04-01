@@ -1,8 +1,12 @@
 /*
  * Add imports in the order you'd like the scss files to be loaded.
  *
+ *= require bootstrap-theme.min.css
+ *= require bootstrap.min.css
+ *= require animate.css
+ *= require contacts.scss
+ *= require flexslider.css.scss
+ *= require info.scss
+ *= require queries.css.scss
+ *= require styles.css
  */
-
-@import 'base/main.scss';
-@import 'base/layout.scss';
-@import 'base/base.scss';

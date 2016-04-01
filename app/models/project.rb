@@ -3,6 +3,11 @@ class Project < ActiveRecord::Base
 #Depends on how admin position is given
 #belongs_to :user, :flag => "admin"
 
+	belongs_to :company
+	
+	has_many :assignments
+	has_many :users, :through => :assignments
+
 	attr_accessor :title, :description, :spec_urls, :proj_id
 
 	#before_action :authorize_admin :only => [:add_user]

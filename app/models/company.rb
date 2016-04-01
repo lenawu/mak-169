@@ -1,8 +1,10 @@
 class Company < ActiveRecord::Base
     
-    #has_many :projects, dependent: :destroy
+    # has_many :projects, dependent: :destroy
     
-    #has many projects
+    has_many :projects
+    
+    
     #attribute :name,      :validate => true
     #attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
     #attribute :description

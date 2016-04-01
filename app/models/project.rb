@@ -1,4 +1,4 @@
-Class Project < ActiveRecord::Base
+class Project < ActiveRecord::Base
 
 #Depends on how admin position is given
 #belongs_to :user, :flag => "admin"

@@ -180,6 +180,18 @@ h2.front-frame { text-align: center; text-transform: uppercase; color: #353738; 
 h2.twitter-post-username { color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; margin-top: 30px; }
 h2.twitter-post-username span { color: #848789; font-weight: 300; }
 h2.logo-header { text-align: center; color: #848789; letter-spacing: 1px; font-size: 24px; font-weight: 300; background: image-url("main-logo.png") no-repeat top center; padding-top: 120px; margin: 70px 0 40px 0; font-style: italic; }
+
+/* ==========================================================================
+About Us Page Styles
+========================================================================== */
+h1.chain2 { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 20px; font-weight: 600; background: image-url("cog-icon.png") no-repeat top center; padding-top: 75px; }
+h2.frame2 { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; padding-top: 5px; margin-top: 20px; }
+h2.mech2 { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; padding-top: 5px; margin-top: 80px; }
+.section-1a { background: image-url("Ankita.jpg") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 600px; position: relative; }
+.section-2a { background: image-url("Aubrey.jpg") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 600px; position: relative; }
+.section-3a { background: image-url("Michelle.jpg") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 600px; position: relative; }
+.subtext { text-align: center; font-size: 1.17em; margin: 0.83em 0; }
+
 /* ==========================================================================
 User Styles
 ========================================================================== */
@@ -195,7 +207,7 @@ a { color: #282f35; -webkit-transition: all .25s ease; -moz-transition: all .25s
 a:hover { color: #64c29e; text-decoration: none; }
 p { text-align: center; font-size: 14px; color: #848789; font-weight: 300; word-spacing: 2px; line-height: 1.8em; margin-top: 25px; }
 p.text-intro { font-size: 18px; }
-.hero { background: image-url("hero-bg.jpg") no-repeat top center #f4f5fc; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 685px; }
+.hero { background: image-url("hero-bg.jpg") no-repeat top center #f4f5fc; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 685px;}
 nav { height: 85px; margin-top: 30px; position: relative; }
 .logo-holder { background: image-url("main-logo.png") no-repeat center center; width: 94px; height: 85px; position: absolute; top: 0; left: 327px; }
 .responsive-logo { display: hidden; }
@@ -205,6 +217,9 @@ header ul li { list-style: none; float: left; text-transform: uppercase; letter-
 header ul li a { display: block; margin: 0 30px; color: #4d4959; }
 .r_spacer { margin-right: 180px; }
 .intro { padding: 115px 0; background-color: #fbfbfb; }
+.padding-top {padding: 15px; background-color: #f4f5fc; }
+.padding-right {padding: 80px; }
+.padding-about {padding: 10px 10px 10px 10px;}
 .section-1 { background: image-url("left-box-1.jpg") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 600px; position: relative; }
 .section-2 { background: image-url("left-box-2.jpg") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 600px; position: relative; }
 .section-3 { background: image-url("red-frame.jpg") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 600px; position: relative; }

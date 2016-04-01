@@ -1,12 +1,15 @@
 /*
  * Add imports in the order you'd like the scss files to be loaded.
  *
- *= require bootstrap-theme.min.css
- *= require bootstrap.min.css
- *= require animate.css
+ *= require bootstrap-theme.min.css.scss
+ *= require bootstrap.min.css.scss
+ *= require animate.css.scss
  *= require contacts.scss
  *= require flexslider.css.scss
  *= require info.scss
  *= require queries.css.scss
- *= require styles.css
+ *= require styles.css.scss
  */
+
+@import "font-awesome-sprockets";
+@import "font-awesome";

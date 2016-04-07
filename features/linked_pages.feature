@@ -16,7 +16,7 @@ Scenario: home page should link to client
 Scenario: home page should link to about 
   Given I am on the home page
   When I follow "who we are"
-  Then I should see "Info#about"
+  Then I should see "About Us"
   
 Scenario: home page should link to mentor
   Given I am on the home page

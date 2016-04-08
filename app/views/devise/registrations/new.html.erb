@@ -1,4 +1,14 @@
-<h2>Sign up</h2>
+<!--<div class='container'>-->
+<style>
+  h2 {
+    padding-left:40px;
+  }
+  input {
+    padding-left:40px;
+  }
+</style>
+
+<h2 style='padding-left:40px'>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -20,6 +30,25 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+  
+  <div>
+      Fill this out if you would like to request admin status!
+  </div>
+  
+  <!--<div class="field">-->
+  <!--  <%= f.label :name %><br />-->
+  <!--  <%= f.text_field :email, autocomplete: "off" %>-->
+  <!--</div>-->
+  
+  <!--<div class="field">-->
+  <!--  <%= f.label :company %><br />-->
+  <!--  <%= f.text_field :email, autocomplete: "off" %>-->
+  <!--</div>-->
+  
+  <!--<div class="field">-->
+  <!--  <%= f.label :profile %><br />-->
+  <!--  <%= f.text_field :email, autocomplete: "off" %>-->
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
@@ -27,3 +56,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<!--</div>-->

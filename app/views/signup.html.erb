@@ -13,6 +13,15 @@
         <%= text_field(:user, :email, {:class => 'login', :placeholder => _("Email") })%>
       </div>
       <div class='clearfix'>
+        <%= text_field(:user, :name, {:class => 'login', :placeholder => _("Full Name") })%>
+      </div>
+      <div class='clearfix'>
+        <%= text_field(:user, :company, {:class => 'login', :placeholder => _("Company Name") })%>
+      </div>
+      <div class='clearfix'>
+        <%= text_field(:user, :profile, {:class => 'login', :placeholder => _("Social Media Profile") })%>
+      </div>
+      <div class='clearfix'>
         <input type="submit" id="submit" class='btn info' value="<%= _('Signup')%>" />
       </div>
       <% end %>

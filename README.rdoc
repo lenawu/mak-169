@@ -25,6 +25,8 @@ To make and submit changes:
     git commit -am "Did something cool"
     git push origin my-cool-changes
     *** work work work repeat. when done, ***
+
+Skip the below two steps if unsure
     git fetch origin
     git merge origin/master
     

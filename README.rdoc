@@ -2,10 +2,10 @@
 
 Heroku :: https://mak-169.herokuapp.com/
 Code Climate :: https://codeclimate.com/github/lenawu/mak-169
-Build Status :: {<img src="https://travis-ci.org/lenawu/mak-169.svg?branch=master" alt="Build Status" />} [https://travis-ci.org/lenawu/mak-169]
-Coverage :: {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/coverage.svg" />} [https://codeclimate.com/github/lenawu/mak-169/coverage]
-GPA :: {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/gpa.svg" />} [https://codeclimate.com/github/lenawu/mak-169]
-Issue Count :: {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/issue_count.svg" />} [https://codeclimate.com/github/lenawu/mak-169]
+Build Status :: {<img src="https://travis-ci.org/lenawu/mak-169.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/lenawu/mak-169]
+Coverage :: {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/coverage.svg" />}[https://codeclimate.com/github/lenawu/mak-169/coverage]
+GPA :: {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/gpa.svg" />}[https://codeclimate.com/github/lenawu/mak-169]
+Issue Count :: {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/issue_count.svg" />}[https://codeclimate.com/github/lenawu/mak-169]
 Pivotal Tracker :: https://www.pivotaltracker.com/n/projects/1542641
 
 == Using Git

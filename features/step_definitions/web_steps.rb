@@ -69,14 +69,6 @@ Given /I am the company "(.*?)"/ do |comp|
   fail "Unimplemented"
 end
 
-Given /I should be logged in/ do |i|
-  fail "Unimplemented"
-end
-
-Given /I am signed out/ do |i|
-  fail "Unimplemented"
-end
-
 Given /the project assigned to me is called "([^"]*)"$/ do |proj|
   fail "Unimplemented"
 end

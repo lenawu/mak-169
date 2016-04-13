@@ -32,7 +32,7 @@ Scenario: Company Representative for Make signing in
 Scenario: Viewing all of company Make's students
 	Given I am the company "Make"
 	When I click on "View_My_Students"
-	Then I am currently on the company's students page
+	Then I should be on Make's Students
 	Then I should see "Student One"
 	Then I should see "Student Two"
 	Then I should see "Student Four"
@@ -48,7 +48,7 @@ Scenario: Company Representative for Berkel signing in
 Scenario: Viewing all of company Berkel's students
 	Given I am the company "Berkel"
 	When I click on "View_My_Students"
-	Then I am currently on the company's students page
+	Then I should be on the Berkel's Students
 	Then I should see "Student Three"
 	Then I should see "Student Five"
 	Then I should not see "Student One"

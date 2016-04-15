@@ -1,0 +1,20 @@
+%h1 Admin::Projects 
+%table
+  %tr
+    %th title
+    %th company
+    %th description
+    %th users
+    
+  - @projects.each do |project|
+    %tr
+      %td= project.title
+      %td
+        - if project.company
+          = project.company.name
+      %td= project.description
+      %td 
+        -project.users.each do |project|
+          %span  
+            = user.email 
+ 

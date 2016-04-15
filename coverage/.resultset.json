@@ -12,47 +12,14 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/mak-169/app/models/project.rb": [
-        1,
-        null,
-        1,
-        null,
+      "/home/ubuntu/workspace/mak-169/app/controllers/users_controller.rb": [
         1,
         1,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/mak-169/app/models/company.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        0,
+        2,
         null,
         null,
-        null
-      ],
-      "/home/ubuntu/workspace/mak-169/app/controllers/info_controller.rb": [
-        1,
-        1,
         null,
         null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
         null,
         null
       ],
@@ -95,6 +62,54 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/mak-169/app/models/assignment.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/project.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/company.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/info_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/mak-169/app/controllers/admin/projects_controller.rb": [
         1,
         null,
@@ -113,12 +128,6 @@
         1,
         null,
         null,
-        null
-      ],
-      "/home/ubuntu/workspace/mak-169/app/models/assignment.rb": [
-        1,
-        1,
-        1,
         null
       ],
       "/home/ubuntu/workspace/mak-169/app/controllers/contacts_controller.rb": [
@@ -203,31 +212,19 @@
         1,
         null
       ],
-      "/home/ubuntu/workspace/mak-169/app/controllers/users_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/home/ubuntu/workspace/mak-169/app/controllers/projects_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        null,
+        null
       ]
     },
-    "timestamp": 1460739412
+    "timestamp": 1460740230
   },
   "RSpec": {
     "coverage": {

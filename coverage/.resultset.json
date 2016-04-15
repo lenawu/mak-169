@@ -12,6 +12,17 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/mak-169/app/models/company.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/mak-169/app/controllers/info_controller.rb": [
         1,
         1,
@@ -38,6 +49,18 @@
         null,
         null,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/home/ubuntu/workspace/mak-169/app/helpers/application_helper.rb": [
@@ -134,17 +157,6 @@
         1,
         null
       ],
-      "/home/ubuntu/workspace/mak-169/app/models/company.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null
-      ],
       "/home/ubuntu/workspace/mak-169/app/models/project.rb": [
         1,
         null,
@@ -164,6 +176,6 @@
         0
       ]
     },
-    "timestamp": 1460079053
+    "timestamp": 1460753603
   }
 }

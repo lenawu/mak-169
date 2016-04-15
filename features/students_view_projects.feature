@@ -1,4 +1,4 @@
-@wip
+
 Feature: Students should be able to sign in to work on projects
   
   As a student,

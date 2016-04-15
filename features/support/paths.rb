@@ -21,6 +21,12 @@ module NavigationHelpers
       
     when /^the thank you page$/
       '/contacts'
+      
+    when /^the users index$/
+      '/users'
+      
+    when /^the projects index$/
+      '/projects'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

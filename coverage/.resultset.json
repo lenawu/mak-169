@@ -7,9 +7,9 @@
         null,
         1,
         null,
+        1,
+        1,
         null,
-        1,
-        1,
         null
       ],
       "/home/ubuntu/workspace/mak-169/app/models/company.rb": [
@@ -26,21 +26,11 @@
       "/home/ubuntu/workspace/mak-169/app/controllers/info_controller.rb": [
         1,
         1,
+        2,
         null,
         null,
-        1,
         null,
         null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
         null,
         null
       ],
@@ -67,12 +57,101 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/admin_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/admin/projects_helper.rb": [
+        1,
+        null
+      ],
       "/home/ubuntu/workspace/mak-169/app/helpers/contacts_helper.rb": [
         1,
         null
       ],
       "/home/ubuntu/workspace/mak-169/app/helpers/info_helper.rb": [
         1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/assignment.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/project.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/company.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+<<<<<<< HEAD
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+=======
+        0,
+>>>>>>> d1c0a9fbd51ed170669b56b9afe644ae32d81a4f
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/info_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/admin/projects_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/admin_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        3,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/home/ubuntu/workspace/mak-169/app/controllers/contacts_controller.rb": [
@@ -157,25 +236,257 @@
         1,
         null
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/mak-169/app/models/project.rb": [
+=======
+      "/home/ubuntu/workspace/mak-169/app/controllers/projects_controller.rb": [
+        1,
+        1,
         1,
         null,
-        1,
         null,
         1,
-        1,
-        null,
-        1,
+        0,
         null,
         null
+      ]
+    },
+    "timestamp": 1460751353
+  },
+  "RSpec": {
+    "coverage": {
+      "/home/ubuntu/workspace/mak-169/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/admin_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/admin/projects_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/contacts_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/info_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/admin_controller.rb": [
+>>>>>>> d1c0a9fbd51ed170669b56b9afe644ae32d81a4f
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/contacts_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/users_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/info_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/admin/projects_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/projects_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/contact_form.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/project.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ],
       "/home/ubuntu/workspace/mak-169/app/models/assignment.rb": [
         0,
         0,
         0,
         0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/contact.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/company.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/mailers/user_mailer.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1460753603
+=======
+    "timestamp": 1460718487
+>>>>>>> d1c0a9fbd51ed170669b56b9afe644ae32d81a4f
   }
 }

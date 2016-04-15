@@ -1,0 +1,16 @@
+%h1 Admin::Projects 
+%table
+  %tr
+    %th title
+    %th description
+    %th users
+    
+  - @projects.each do |project|
+    %tr
+      %td= project.title
+      %td= project.description
+      %td 
+        -project.users.each do |user|
+          %span  
+            = user.email 
+ 

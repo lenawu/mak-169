@@ -12,7 +12,18 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/mak-169/app/controllers/users_controller.rb": [
+      "/home/ubuntu/workspace/mak-169/app/models/company.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/info_controller.rb": [
         1,
         1,
         2,
@@ -84,7 +95,16 @@
         1,
         null,
         1,
-        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null
@@ -455,6 +475,6 @@
         0
       ]
     },
-    "timestamp": 1460718487
+    "timestamp": 1460083353
   }
 }

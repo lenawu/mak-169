@@ -45,3 +45,4 @@ Scenario: Signing up as an admin but forgetting to fill out admin info
 	  | user[name]     |                                       |
     | user[profilel] |                                       |
   Then I should see "Please fill out admin info!"
+

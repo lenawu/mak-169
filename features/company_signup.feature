@@ -1,6 +1,6 @@
 Feature: New users want to sign up as an administrator. NOTE: These tests seem simple, but since 
   we were using devise to do our authentication, figuring out the code was very complicated
-
+  
     As a company
     So that I can access the company rep features of the site
     I want to be able to create a company rep account

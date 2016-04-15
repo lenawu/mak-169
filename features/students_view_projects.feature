@@ -1,4 +1,4 @@
-@wip
+
 Feature: Students should be able to sign in to work on projects
   
   As a student,
@@ -26,6 +26,7 @@ Scenario: I should be able to see all of the projects
     Given I am on the home page
     Given I follow "Projects"
     Then I should see "A Cool Project"
+    Then I should see "Elephant"
 
 # Scenario: should not be able to see projects if not signed in
 #   Given I am signed out

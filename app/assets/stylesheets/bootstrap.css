@@ -733,6 +733,9 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+.spacingfix {
+  margin: 30px;
+}
 .container {
   padding-right: 15px;
   padding-left: 15px;

@@ -11,7 +11,7 @@ Given /I should be logged in$/ do
 end
 
 Given /I should be logged in as an admin$/ do
-    fail "Unimplemented"
+    fail 'Unimplemented'
 end
 
 Given /I am signed out$/ do

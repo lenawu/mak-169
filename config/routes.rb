@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :companies
+  get 'projects/create' => 'projects#create'
+
+  post 'projects/create' => "projects#create"
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end  
+  
   namespace :admin do
   get 'projects/new'
   end

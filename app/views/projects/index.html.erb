@@ -1,7 +1,7 @@
-<% if not user_signed_in? %>
-<h1>Sign in to see your projects.</h1>
+<% if user_signed_in? or company_signed_in? %>
+  <h1>Your Projects</h1>
 <% else %>
-<h1>Your Projects</h1>
+  <h1>Sign in to see your projects.</h1>
 <% end %>
 
 <table>
@@ -9,6 +9,7 @@
     <th>company</th>
     <th>title</th>
     <th>description</th>
+    <th>students</th>
   </tr>
 
 <% if user_signed_in? %> 
@@ -21,10 +22,27 @@
       </td>
       <td><%= project.title %></td>
       <td><%= project.description %></td>
+      <td><%= project.students %></td>
     </tr>
   <% end %>
-  </table>
   <% if current_user.projects.empty? %>
     <p>No projects have been assigned to you yet.</p>
   <% end %>
 <% end %>
+
+<% if company_signed_in? %>
+  <%= link_to "Create Project", projects_create_path %><br>
+  <% current_company.projects.each do |project| %>
+    <tr>
+      <td>
+          <% if project.company %>
+              <%= project.company.name %>
+          <% end %>
+      </td>
+      <td><%= project.title %></td>
+      <td><%= project.description %></td>
+      <td><%= project.students %></td>
+    </tr>
+  <% end %>
+<% end %>
+</table>

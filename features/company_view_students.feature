@@ -1,4 +1,4 @@
-@wip
+
 Feature: Company can View all of its Students
 
 	As a company representative
@@ -12,52 +12,40 @@ Background: All Students in the Project Database
 	| Make@company.com   | password |
 	| Berkel@company.com | password |
 	
-	Given the folloiwng companies exist:
-	| name   | email            | description |
-	| Make   | Make@company.com | working     |
-	| Berkel | Berkel@company.com | creating  |
+	Given the following companies exist:
+	| name   | email            | description | password |
+	| Make   | Make@company.com | working     | password |
+	| Berkel | Berkel@company.com | creating  | password |
 
 	Given the following projects exist:
-	| title | description     | spec_urls   | proj_id | user        |
-	| Mak   | example project | oasidjf.com | 1       | Student One |
-	| Mak   | example project | oasidjf.com | 1       | Student Two |
+	| title | description     | company   | students      |
+	| Mak   | example project | Make      | Student One   |
+	| Pop   | example project | Make      | Student Two   |
+	| Car   | example project | Berkel    | Student Three |
 	
-	Given the following users exist:
-	| user_name   |
-	| Student One |
-	| Student Two |
-
 	Given I am currently on the home page
 
 Scenario: Company Representative for Make signing in
 	Given I am on the home page
 	When I follow "Sign In"
-	Given I fill in "Email" with "Make@company.com"
-	Given I fill in "Password" with "password"
-	#Given I sign in with "Make@company.com" and "password"
-	And I click on "Log in"
-	Then I should be logged in
+    And I follow "Click here for companies"
+	Given I fill in "company[email]" with "Make@company.com"
+	Given I fill in "company[password]" with "password"
+	And I press "Log in"
+
 
 Scenario: Viewing all of company Make's students
-	Given I am on the project page
-	#When I click on "View_My_Students"
-	#Then I should be on Make's Students
+    Given I am on the home page
+	Given the company with the name "Make" owns the project named "Mak"
+	Given the company with the name "Make" owns the project named "Pop"
+	Given the company with the name "Berkel" owns the project named "Car"
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    Given I fill in "company[email]" with "Make@company.com" 
+    Given I fill in "company[password]" with "password"
+    And I press "Log in"
+	Given I am on the projects index
 	Then I should see "Student One"
 	Then I should see "Student Two"
 	Then I should not see "Student Three"
-	Then I should not see "Student Four"
 
-#Scenario: Company Representative for Berkel signing in
-	#Given I am on the home page
-	#When I follow "Sign_In"
-	#Given I sign in with "Berkel@company.com" and "password"
-	#And I click on "login"
-	#Then I should be logged in
-
-#Scenario: Viewing all of company Berkel's students
-	#Given I am the company "Berkel"
-	#When I click on "View_My_Students"
-	#Then I should be on the Berkel's Students
-	#Then I should see "Student Three"
-	#Then I should see "Student Five"
-	#Then I should not see "Student One"

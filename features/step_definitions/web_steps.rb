@@ -46,7 +46,7 @@ end
 Given /the following projects exist:/ do |projects_table|
   projects_table.hashes.each do |project|
     # each returned element will be a hash whose key is the table header.
-    p = Project.create!({:title =>project["title"], :description => project["description"]})
+    p = Project.create!({:title =>project["title"], :description => project["description"], :students => project["students"]})
     p.company = Company.find_by(name: project["company"])
   end
 end
@@ -56,6 +56,12 @@ Given /the following companies exist:/ do |companies_table|
     # each returned element will be a hash whose key is the table header.
     Company.create(company)
   end
+end
+
+Given /^the company with the name "([^"]*)" owns the project named "([^"]*)"$/ do |company_name, project_title|
+  company = Company.find_by(name: company_name)
+  project = Project.find_by(title: project_title)
+  company.projects << project
 end
 
 Given /^the user with email "([^"]*)" is assigned the project named "([^"]*)"$/ do |email, title|

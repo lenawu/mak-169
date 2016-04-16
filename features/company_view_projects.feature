@@ -1,4 +1,4 @@
-@wip
+
 Feature: Company Representatives can view projects
     As a company representative,
     So that I can monitor students progress
@@ -10,25 +10,30 @@ Background: Company in the Database
     | name | email            | description             |
     | comp | comp@company.com | company that does this  |
     
-    Given "comp" has the following projects:
-    | title | description       |  spec_url     | project_id    |
-    | proj1 | example project   | oasidjf.com   | 1             |
+    Given the following projects exist:
+    | title | description       |  spec_url     | proj_id    |  students    |
+    | proj1 | example project   | oasidjf.com   | 1          |  rob         |
     
      
     Given I am currently on the home page
     
 Scenario: Company Representative signing in
     Given I am on the home page
-    When I follow "Sign_In"
-    Given I sign in with "comp@company.com" and "password"
-    And I click on "login"
-    Then I should be logged in
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    Given I fill in "Email" with "comp@company.com" 
+    Given I fill in "Password" with "password"
+    And I press "Log in"
+    Then I am on the home page
     
 Scenario: Company Representatives see list of projects
     Given I am on the home page
-    When I follow "Sign_In"
-    Given I sign in with "comp@company.com" and "password"
-    And I click on "login"
-    Then I should be on Company Dashboard
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    Given I fill in "Email" with "comp@company.com" 
+    Given I fill in "Password" with "password"
+    And I press "Log in"
+    Then I am on the home page
     And I should see "Projects"
+    When I follow "Projects"
     And I should see "proj1"

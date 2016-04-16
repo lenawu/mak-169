@@ -46,7 +46,7 @@ end
 Given /the following projects exist:/ do |projects_table|
   projects_table.hashes.each do |project|
     # each returned element will be a hash whose key is the table header.
-    p = Project.create!({:title =>project["title"], :description => project["description"]})
+    p = Project.create!({:title =>project["title"], :description => project["description"], :students => project["students"]})
     p.company = Company.find_by(name: project["company"])
   end
 end

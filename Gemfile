@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # User authentications
 gem 'devise'
+# Annotate models with the attributes available to them
+gem 'annotate'
 
 gem 'haml-rails'
 gem 'simple_form'

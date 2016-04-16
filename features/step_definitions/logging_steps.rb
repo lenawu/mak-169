@@ -37,7 +37,9 @@ Given /I should be logged in as an admin$/ do
 end
 
 Given /I am signed out$/ do
-    visit logout_path
+    if user_signed_in?
+        visit destroy_user_session_path
+    end
 end
 
 Then /^(?:|I )should be on "([^"]*)$/ do |text|

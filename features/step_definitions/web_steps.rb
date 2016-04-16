@@ -58,8 +58,19 @@ Given /the following companies exist:/ do |companies_table|
   end
 end
 
-Given /^(?:|I ) sign in with "([^"]*)" and "([^"]*)"$/ do |email, password|
-  fail "Unimplemented"
+Given /^the user with email "([^"]*)" is assigned the project named "([^"]*)"$/ do |email, title|
+  user = User.find_by(email: email)
+  project = Project.find_by(title: title)
+  user.projects << project
+end
+
+Given /^I sign in with "([^"]*)" and "([^"]*)"$/ do |email, password|
+  visit new_user_session_path
+  step "I fill in the following:", table(%Q(
+    | user[email]    | #{email}     |
+    | user[password] | #{password}  |
+  ))
+  step 'I press "Log in"'
 end
 
 Given /the project assigned to me is "(.*?)"/ do |project|

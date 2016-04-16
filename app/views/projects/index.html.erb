@@ -1,4 +1,8 @@
-<h1>All Projects</h1>
+<% if not user_signed_in? %>
+<h1>Sign in to see your projects.</h1>
+<% else %>
+<h1>Your Projects</h1>
+<% end %>
 
 <table>
   <tr>
@@ -6,16 +10,21 @@
     <th>title</th>
     <th>description</th>
   </tr>
- 
-<% @projects.each do |project| %>
-  <tr>
-    <td>
-        <% if project.company %>
-            <%= project.company.name %>
-        <% end %>
-    </td>
-    <td><%= project.title %></td>
-    <td><%= project.description %></td>
-  </tr>
+
+<% if user_signed_in? %> 
+  <% current_user.projects.each do |project| %>
+    <tr>
+      <td>
+          <% if project.company %>
+              <%= project.company.name %>
+          <% end %>
+      </td>
+      <td><%= project.title %></td>
+      <td><%= project.description %></td>
+    </tr>
+  <% end %>
+  </table>
+  <% if current_user.projects.empty? %>
+    <p>No projects have been assigned to you yet.</p>
+  <% end %>
 <% end %>
-</table>

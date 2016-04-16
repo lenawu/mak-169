@@ -21,12 +21,28 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
-  
+    
     <div class="actions">
       <%= f.submit "Sign up" %>
     </div>
     <div><%= link_to "Click here for companies", new_company_registration_path, class: "page-link r_spacer" %> </div>
+    
   <% end %>
   
   <%= render "devise/shared/links" %>
+    <div>
+    Please fill this in if you would like to register as a company. 
+    Your account will be created and achieve company status once your company credentials are confirmed!
+    </div>
+  
+    <form accept-charset="UTF-8" action="/" method="post">
+    <label for="name">Name: </label> 
+    <input name="name"/>
+    <label for="company">Company: </label>
+    <input name="company"/>
+    <label for="profile">Linkedin Profile (or other social media profile): </label> 
+    <input name="profile"/>
+    </form>
+  
 </div>
+

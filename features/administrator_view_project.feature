@@ -13,9 +13,9 @@ Background: Users that exist and Projects that exist
   | email2@berkeley.com| password2 | false  |
   
   Given the following projects exist:
-  | title         | name         | description         | 
-  | apple         | apple_time   | baking              |
-  | strawberry    | rhubarb      | stirring            |
+  | title          | description         | 
+  | apple          | baking              | 
+  | strawberry     | stirring            |                     
   
 Scenario: viewing all projects available as admin
     Given I am on the home page
@@ -26,11 +26,11 @@ Scenario: viewing all projects available as admin
     Then I should be on the home page
     When I follow "All Projects"
     Then I should see "Admin::Projects"
-    Then I should see "company"
     Then I should see "title"
     Then I should see "description"
-    Then I should not see "leaving"
-    
+    Then I should see "apple"
+    Then I should see "baking"
+
 Scenario: viewing all projects as a non-admin
   Given I am on the home page
   When I follow "Sign In"

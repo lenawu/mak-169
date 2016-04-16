@@ -1,0 +1,20 @@
+<h1>Create New Project</h1>
+<%= form_for :project do %>
+
+ <%= label :project, :title, 'Title' %>
+ <%= text_field :project, :title %>
+
+ <%= label :project, :description, 'Description' %>
+ <%= text_field :project, :description %>
+
+ <%= label :project, :spec_urls, 'Spec URL' %>
+ <%= text_field :project, :spec_urls %>
+ 
+ <%= label :project, :proj_id, 'Project ID' %>
+ <%= text_field :project, :proj_id %>
+ 
+ <%= label :project, :students, 'Student' %>
+ <%= text_field :project, :students %>
+ 
+  <div><%= submit_tag 'Save' %></div>
+<% end %>

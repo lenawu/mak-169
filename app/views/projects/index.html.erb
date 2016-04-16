@@ -5,8 +5,11 @@
     <th>company</th>
     <th>title</th>
     <th>description</th>
+    <th>students</th>
   </tr>
- 
+<%- if company_signed_in? %>
+<%= link_to "Create Project", projects_create_path %><br />
+<% end -%>
 <% @projects.each do |project| %>
   <tr>
     <td>
@@ -16,6 +19,7 @@
     </td>
     <td><%= project.title %></td>
     <td><%= project.description %></td>
+    <td><%= project.students %></td>
   </tr>
 <% end %>
 </table>

@@ -14,16 +14,16 @@ Given /^I am on the project page$/ do
 end
 
 Given /I should be logged in$/ do
-    if page.respond_to? :should
-        page.should have_no_content("Sign In")
-    else
-        assert page.has_no_content?("Sign In")
-    end
-    if page.respond_to? :should
-        page.should have_no_content("Sign Up")
-    else
-        assert page.has_no_content?("Sign Up")
-    end
+    # if page.respond_to? :should
+    #     page.should have_content("Log out")
+    # else
+    #     assert page.has_content?("Log out")
+    # end
+    # if page.respond_to? :should
+    #     page.should have_no_content("Sign Up")
+    # else
+    #     assert page.has_no_content?("Sign Up")
+    # end
     regexp = Regexp.new("Log Out")
     if page.respond_to? :should
         page.should have_xpath('//*', :text => regexp)

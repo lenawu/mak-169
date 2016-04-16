@@ -58,6 +58,12 @@ Given /the following companies exist:/ do |companies_table|
   end
 end
 
+Given /^the company with the name "([^"]*)" owns the project named "([^"]*)"$/ do |company_name, project_title|
+  company = Company.find_by(name: company_name)
+  project = Project.find_by(title: project_title)
+  company.projects << project
+end
+
 Given /^the user with email "([^"]*)" is assigned the project named "([^"]*)"$/ do |email, title|
   user = User.find_by(email: email)
   project = Project.find_by(title: title)

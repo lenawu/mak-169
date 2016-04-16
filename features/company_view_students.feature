@@ -13,14 +13,15 @@ Background: All Students in the Project Database
 	| Berkel@company.com | password |
 	
 	Given the following companies exist:
-	| name   | email            | description |
-	| Make   | Make@company.com | working     |
-	| Berkel | Berkel@company.com | creating  |
+	| name   | email            | description | password |
+	| Make   | Make@company.com | working     | password |
+	| Berkel | Berkel@company.com | creating  | password |
 
 	Given the following projects exist:
-	| title | description     | spec_urls   | proj_id | students    |
-	| Mak   | example project | oasidjf.com | 1       | Student One |
-	| Mak   | example project | oasidjf.com | 1       | Student Two |
+	| title | description     | company   | students      |
+	| Mak   | example project | Make      | Student One   |
+	| Pop   | example project | Make      | Student Two   |
+	| Car   | example project | Berkel    | Student Three |
 	
 	Given I am currently on the home page
 
@@ -28,16 +29,23 @@ Scenario: Company Representative for Make signing in
 	Given I am on the home page
 	When I follow "Sign In"
     And I follow "Click here for companies"
-	Given I fill in "Email" with "Make@company.com"
-	Given I fill in "Password" with "password"
+	Given I fill in "company[email]" with "Make@company.com"
+	Given I fill in "company[password]" with "password"
 	And I press "Log in"
 
 
 Scenario: Viewing all of company Make's students
-	Given I am on the home page
-	When I follow "Projects"
+    Given I am on the home page
+	Given the company with the name "Make" owns the project named "Mak"
+	Given the company with the name "Make" owns the project named "Pop"
+	Given the company with the name "Berkel" owns the project named "Car"
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    Given I fill in "company[email]" with "Make@company.com" 
+    Given I fill in "company[password]" with "password"
+    And I press "Log in"
+	Given I am on the projects index
 	Then I should see "Student One"
 	Then I should see "Student Two"
 	Then I should not see "Student Three"
-	Then I should not see "Student Four"
 

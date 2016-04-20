@@ -266,7 +266,7 @@
       "/home/ubuntu/workspace/mak-169/app/controllers/contacts_controller.rb": [
         1,
         1,
-        10,
+        12,
         null,
         null,
         null,
@@ -276,16 +276,16 @@
         null,
         null,
         1,
-        4,
+        6,
         null,
-        4,
-        4,
-        2,
-        2,
-        2,
+        6,
+        6,
+        3,
+        3,
+        3,
         null,
-        2,
-        2,
+        3,
+        3,
         null,
         null,
         null
@@ -304,7 +304,7 @@
         null,
         null,
         null,
-        2,
+        3,
         null,
         null
       ],
@@ -346,7 +346,7 @@
         null
       ]
     },
-    "timestamp": 1461192922
+    "timestamp": 1461194665
   },
   "RSpec": {
     "coverage": {

@@ -8,16 +8,16 @@ Feature: Administrator can create Student Projects
 Background: Administrator and Students on the Database
 
 	Given the following users exist:
-	| first_name | last_name | email             | password | user_type      |
-	| First      | Last      | mail@berkeley.edu | password | student        |
-	| Second     | Later     | mail@berkeley.com | password | student        |
+	| email             | password |
+	| mail@berkeley.edu | password |
+	| mail@berkeley.com | password |
 
 	Given I am currently on the home page
 
 Scenario: Administrator signing in
-	Given I follow "Sign_In"
-	Given I sign in with "email@email.com" and "password"
-	When I click on “login” then I should be logged in
+	Given I follow "Sign In"
+	Given I sign in with "mail@berkeley.com" and "password"
+	Then I press "Log in"
 
 Scenario: Administrator setting up project
 	Given I am on the dashboard

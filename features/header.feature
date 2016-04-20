@@ -1,4 +1,4 @@
-@wip
+
 Feature: visitors should see a helpful header
   
   As a site user,
@@ -7,16 +7,21 @@ Feature: visitors should see a helpful header
 
 Background: on the home page
   Given the following users exist:
-    | first_name | last_name | email              | password
-	  | First      | Last      | email@berkeley.edu | password
+    | email              | password
+	  | email@berkeley.edu | password
   Given I am on the home page
 
 Scenario: links to see if I am signed in
   Given I sign in with "email@berkeley.edu" and "password"
-  Then I should see "Sign out"
-  Then I should see "My projects"
+  Then I am on the home page
+  Then I should see "Home"
+  Then I should see "All Projects"
 
 Scenario: links to see if I am signed out
-  Given I am signed out
-  Then I should see "Sign in"
-  Then I should see "About"
+  Given I am on the home page
+  Then I should see "Sign In"
+  Then I should see "Sign Up"
+  Then I should see "All Projects"
+  Then I should see "About Us"
+  Then I should see "Contact"
+  Then I should not see "Mak"

@@ -18,10 +18,10 @@ Background: All Students in the Project Database
 	| Berkel | Berkel@company.com | creating  | password |
 
 	Given the following projects exist:
-	| title | description     | company   | students      |
-	| Mak   | example project | Make      | Student One   |
-	| Pop   | example project | Make      | Student Two   |
-	| Car   | example project | Berkel    | Student Three |
+	| title | description     | spec_urls | company   | students      | proj_id |
+	| Mak   | example project | spec1.com | Make      | Student One   | 10      |
+	| Pop   | example project | spec2.com | Make      | Student Two   | 11      |
+	| Car   | example project | spec3.com | Berkel    | Student Three | 12      |
 	
 	Given I am currently on the home page
 
@@ -48,4 +48,6 @@ Scenario: Viewing all of company Make's students
 	Then I should see "Student One"
 	Then I should see "Student Two"
 	Then I should not see "Student Three"
+	Then I should see "spec1.com"
+	Then I should see "10"
 

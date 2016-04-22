@@ -91,6 +91,23 @@ Given /the project assigned to me is called "([^"]*)"$/ do |proj|
   fail "Unimplemented"
 end
 
+Given /I sign in as a company with email "(.*?)" and password "(.*?)"/ do |email, password|
+  step 'I am on the home page'
+  step 'I follow "Sign In"'
+  step 'I follow "Click here for companies"'
+  step 'I fill in "Email" with "comp@company.com"'
+  step 'I fill in "Password" with "password"'
+  step 'I press "Log in"'
+end
+
+Given /I sign in as an admin with email "(.*?)" and password "(.*?)"/ do |email, password|
+ fail "Unimplemented"
+end
+
+Given /I create a project/ do |project_table|
+  fail "Unimplemented"
+end
+
 
 # End of custom step definitions
 

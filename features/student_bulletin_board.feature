@@ -9,7 +9,6 @@ Background: Users exist
 Given the following users exist:
     | email               | password  |
 	| email@berkeley.com  | password  |
-    | email1@berkeley.com | password1 |
 
 Scenario: There should be a bulletin board page
     Given I sign in with "email@berkeley.com" and "password"

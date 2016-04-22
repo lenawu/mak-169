@@ -79,11 +79,25 @@ Given /^I sign in with "([^"]*)" and "([^"]*)"$/ do |email, password|
   step 'I press "Log in"'
 end
 
+Given /^I sign in with email "([^"]*)" and password "([^"])"$/ do |email, password|
+  visit new_user_session_path
+  step "I fill in the following:", table(%Q(
+    | user[email]    | #{email}    |
+    | user[password] | #{password} |
+  ))
+  step 'I press "Log in"'
+end
+
 Given /the project assigned to me is "(.*?)"/ do |project|
   fail "Unimplemented"
 end
 
 Given /I am the company "(.*?)"/ do |comp|
+  fail "Unimplemented"
+end
+
+Given /I am on the user page $/ do
+  #visit path_to()
   fail "Unimplemented"
 end
 

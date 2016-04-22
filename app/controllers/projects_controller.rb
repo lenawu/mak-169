@@ -22,6 +22,8 @@ class ProjectsController < ApplicationController
     def create
         if params.has_key?(:project)
             @project = Project.create!(project_params)
+            @company = current_company
+            @company.projects << @project
             flash[:notice] = "#{@project.title} was successfully created."
             redirect_to projects_path
         end

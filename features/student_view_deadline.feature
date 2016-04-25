@@ -21,9 +21,10 @@ Scenario: student will add and view deadlines
     When I sign in with email "student@email.com" and password "password"
     Given I am on the user page
     Then I should see "proj1"
-    When I press "add deadline"
+    When I press "New Event"
     And I fill in "Description" with "add a table"
     And I fill in "Points" with "3"
+    And I fill in "Status" with "Not finished"
     And I press "apply"
     Then I should see "add a table"
     Then I should see "3"

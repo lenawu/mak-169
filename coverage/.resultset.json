@@ -57,6 +57,11 @@
         1,
         1,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/home/ubuntu/workspace/mak-169/app/controllers/users_controller.rb": [
@@ -84,6 +89,11 @@
         null,
         1,
         2,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -240,6 +250,8 @@
         0,
         0,
         0,
+        0,
+        0,
         null,
         null,
         null,
@@ -346,7 +358,7 @@
         null
       ]
     },
-    "timestamp": 1461194665
+    "timestamp": 1461582817
   },
   "RSpec": {
     "coverage": {

@@ -39,6 +39,9 @@ gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'mail_form', '~> 1.5.0.rc'
+
+gem "simple_calendar"
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

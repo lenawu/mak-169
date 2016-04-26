@@ -1,4 +1,3 @@
-
 Feature: Company can View all of its Students
 
 	As a company representative

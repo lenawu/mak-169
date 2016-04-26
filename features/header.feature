@@ -1,4 +1,3 @@
-
 Feature: visitors should see a helpful header
   
   As a site user,

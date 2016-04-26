@@ -88,11 +88,13 @@ Given /^I sign in with email "([^"]*)" and password "([^"])"$/ do |email, passwo
   step 'I press "Log in"'
 end
 
-Given /the project assigned to me is "(.*?)"/ do |project|
+Given /the project assigned to me is "(.*?)"/ do |proj|
+  #proj is in current_user.projects
   fail "Unimplemented"
 end
 
 Given /I am the company "(.*?)"/ do |comp|
+  #current_company.name == comp
   fail "Unimplemented"
 end
 

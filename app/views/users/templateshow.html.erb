@@ -1,0 +1,40 @@
+<div class="padding-right">
+<% if user_signed_in? or company_signed_in? %>
+  <h1>Dashboard</h1>
+<% else %>
+  <h1>Sign in to see your dashboard</h1>
+<% end %>
+
+<h1>My Projects</h1>
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Spec URLs</th>
+        <th>Project ID</th>
+    </tr>
+
+<% if user_signed_in? %>
+  <% current_user.projects.each do |project| %>
+    <tr>
+        <td>
+            <% if project.company %>
+                <%= project.company.name %>
+            <% end %>
+        </td>
+        <td><%= project.title %></td>
+        <td><%= project.description %></td>
+        <td><%= project.spec_urls %></td>
+        <td><%= project.proj_id %></td>
+    </tr>
+  <% end %>
+  <% if current_user.projects.empty? %>
+    <p>No projects have been assigned to you yet.</p>
+  <% end %>
+<% end %>
+</table>
+
+<h1>Messages</h1>
+
+</div>

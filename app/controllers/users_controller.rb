@@ -29,7 +29,12 @@ class UsersController < ApplicationController
         #@events = Event.all
     #end
     
+    #For dashboard functionality
     # def show
     #     @user = User.find(params[:id])
+    
+    #     respond_to do |format|
+    #          format.html
+    #          format.xml { render :xml => @user }
     # end
 end

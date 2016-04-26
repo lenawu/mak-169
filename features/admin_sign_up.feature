@@ -1,5 +1,4 @@
 @wip
-
 Feature: New users want to sign up as an administrator 
 
     As a company

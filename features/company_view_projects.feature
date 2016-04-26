@@ -1,4 +1,3 @@
-
 Feature: Company Representatives can view projects
     As a company representative,
     So that I can monitor students progress

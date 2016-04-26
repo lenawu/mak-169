@@ -1,4 +1,3 @@
-
 Feature: Administrators should be able to view all projects and students attached to those projects
   As an administrator,
   So I can track all our projects and progress,

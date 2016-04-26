@@ -99,6 +99,11 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/home/ubuntu/workspace/mak-169/app/controllers/application_controller.rb": [
@@ -358,7 +363,7 @@
         null
       ]
     },
-    "timestamp": 1461582817
+    "timestamp": 1461658112
   },
   "RSpec": {
     "coverage": {

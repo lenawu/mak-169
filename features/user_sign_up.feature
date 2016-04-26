@@ -20,6 +20,7 @@ Scenario: Signing in
   Then I should not see "Sign In"
   Then I should not see "Sign Up"
   Then I should see "Log Out"
+  Then I should see "Home"
 
 Scenario: Email already exists
   When I follow "Sign Up"

@@ -16,10 +16,13 @@ Background: User and Project Included on the Database
 Scenario: Signing in
   	Given I am on the home page
   	When I follow "Sign In"
-	When I fill in "Email" with "email@berkeley.com"
-	When I fill in "Password" with "password"
+  	When I fill in the following:
+  	  | user[email]    | email@berkeley.com |
+  	  | user[password] | password           |
 	And I press "Log in"
 	Then I should be on the home page
+	Then I should not see "Sign In"
+	Then I should not see "Sign Up"
 	Then I should see "Log Out"
 	Then I should see "Home"
 

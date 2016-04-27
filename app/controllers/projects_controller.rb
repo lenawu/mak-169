@@ -26,6 +26,8 @@ class ProjectsController < ApplicationController
             @project = Project.create!(project_params)
             @company = current_company
             @company.projects << @project
+            @forum = Forum.create(:title =>@project.title)
+            @project.forum = @forum
             flash[:notice] = "#{@project.title} was successfully created."
             redirect_to projects_path
         end

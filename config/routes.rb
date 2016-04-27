@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   #       post 'toggle'
   #     end  
   
+  resources :forums do
+    resources :messages
+  end
+  
   post 'projects/:id/approve/' => 'projects#approve', :as => :approve_project
 
   namespace :admin do

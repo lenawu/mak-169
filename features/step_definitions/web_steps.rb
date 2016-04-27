@@ -43,6 +43,14 @@ Given /the following users exist:/ do |users_table|
   end
 end
 
+Given /the following admins exist:/ do |users_table|
+  users_table.hashes.each do |user|
+    # each returned element will be a hash whose key is the table header.
+    u = User.create(user)
+    u.update_attribute(:admin, true)
+  end
+end
+
 Given /the following projects exist:/ do |projects_table|
   projects_table.hashes.each do |project|
     # each returned element will be a hash whose key is the table header.
@@ -111,13 +119,9 @@ Given /I sign in as a company with email "(.*?)" and password "(.*?)"/ do |email
   step 'I am on the home page'
   step 'I follow "Sign In"'
   step 'I follow "Click here for companies"'
-  step 'I fill in "Email" with "comp@company.com"'
-  step 'I fill in "Password" with "password"'
+  step 'I fill in "company[email]" with "#{email}"'
+  step 'I fill in "company[password]" with "#{password}"'
   step 'I press "Log in"'
-end
-
-Given /I sign in as an admin with email "(.*?)" and password "(.*?)"/ do |email, password|
- fail "Unimplemented"
 end
 
 Given /I create a project/ do |project_table|

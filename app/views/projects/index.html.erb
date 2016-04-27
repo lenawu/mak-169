@@ -17,6 +17,31 @@
   </tr>
 
 <% if user_signed_in? %> 
+  <% if current_user.try(:admin?) %>
+    <% @projects.each do |project| %>
+      <tr>
+        <td>
+            <% if project.company %>
+                <%= project.company.name %>
+            <% end %>
+        </td>
+        <td><%= project.title %></td>
+        <td><%= project.description %></td>
+        <td><%= project.spec_urls %></td>
+        <td><%= project.proj_id %></td>
+        <td><%= project.students %></td>
+        <td>
+          <% if project.approved %>
+            Approved.
+          <% else %>
+            <%= button_to [:approve, project] do %>
+              Approve
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
   <% current_user.projects.each do |project| %>
     <tr>
       <td>
@@ -55,8 +80,12 @@
         <% if project.approved %>
           Approved.
         <% else %>
-          <%= button_to [:approve, project] do %>
-            Approve
+          <% if current_user.try(:admin?) %>
+            <%= button_to [:approve, project] do %>
+              Approve
+            <% end %>
+          <% else %>
+            Pending.
           <% end %>
         <% end %>
       </td>

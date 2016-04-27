@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #       post 'toggle'
   #     end  
   
+  post 'projects/:id/approve/' => 'projects#approve', :as => :approve_project
+
   namespace :admin do
   get 'projects/new'
   end

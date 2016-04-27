@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415182804) do
+ActiveRecord::Schema.define(version: 20160427164554) do
 
   create_table "assignments", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -49,9 +49,10 @@ ActiveRecord::Schema.define(version: 20160415182804) do
     t.string   "spec_urls"
     t.integer  "proj_id"
     t.string   "students"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "company_id"
+    t.boolean  "approved",    default: false
   end
 
   add_index "projects", ["company_id"], name: "index_projects_on_company_id"

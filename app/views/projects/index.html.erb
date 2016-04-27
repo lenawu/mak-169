@@ -13,6 +13,7 @@
     <th>Spec URLs</th>
     <th>Project ID</th>
     <th>Students</th>
+    <th>Approval</th>
   </tr>
 
 <% if user_signed_in? %> 
@@ -28,6 +29,7 @@
       <td><%= project.spec_urls %></td>
       <td><%= project.proj_id %></td>
       <td><%= project.students %></td>
+      <td><%= project.approved %></td>
     </tr>
   <% end %>
   <% if current_user.projects.empty? %>
@@ -49,6 +51,15 @@
       <td><%= project.spec_urls %></td>
       <td><%= project.proj_id %></td>
       <td><%= project.students %></td>
+      <td>
+        <% if project.approved %>
+          Approved.
+        <% else %>
+          <%= button_to [:approve, project] do %>
+            Approve
+          <% end %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 <% end %>

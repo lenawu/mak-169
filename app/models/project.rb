@@ -7,9 +7,11 @@
 #  description :text
 #  spec_urls   :string
 #  proj_id     :integer
+#  students    :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  company_id  :integer
+#  approved    :boolean          default(FALSE)
 #
 
 class Project < ActiveRecord::Base

@@ -22,14 +22,24 @@ class MessagesController < ApplicationController
         @message = Message.new
     end
     def edit
-        
+        @forum = Forum.find(params[:forum_id])
+        @message = @forum.messages.find(params[:id])
     end
-    def updated
-        
+    def update
+        @forum = Forum.find(params[:forum_id])
+        @message = @forum.messages.find(params[:id])
+        if @message.update(message_params)
+            redirect_to forum_message_path(@forum,@message)
+        else 
+            render "edit"
+        end
     end
     
     def destroy
-        
+        @forum = Forum.find(params[:forum_id])
+        @message = @forum.messages.find(params[:id])
+        @message.destroy
+        redirect_to forum_path(@forum)
     end
     private
         def message_params

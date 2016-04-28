@@ -2,4 +2,6 @@
 <h2><%= @message.description %></h2>
 
 
-<%= link_to "Back to forum", forum_path(@forum)%>
+<div><%= link_to "Edit message", edit_forum_message_path(@forum,@message)%></div>
+<div><%= link_to "Delete message", forum_message_path(@forum,@message), method: :delete, data: {confirm: "delete for realz?"}%></div>
+<div><%= link_to "Back to forum", forum_path(@forum)%></div>

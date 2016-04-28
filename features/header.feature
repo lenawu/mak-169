@@ -31,8 +31,8 @@ Scenario: links to see if I am signed in
   And I press "Log in"
   Then I should not see "Mak"
   Then I should see "Projects"
-  Then I should see "About Us"
-  Then I should see "Contact"
+  Then I should see "Deadlines"
+  Then I should see "Dashboard"
   Then I should see "Log Out"
 
 Scenario: links to see if I am signed out

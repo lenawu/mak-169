@@ -27,7 +27,7 @@ Scenario: student will add and view deadlines
     And I press "Log in"
     #Then I should see "proj1"
     #When I press "New Event"
-    When I follow "Deadlines"
+    When I follow "My Deadlines"
     Then I should see "The Deadlines"
     When I follow "Create Deadline"
     Then I should see "Create New Deadline"

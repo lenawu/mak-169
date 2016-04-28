@@ -1,3 +1,4 @@
+
 <div class="padding-right">
 <% if user_signed_in? or company_signed_in? %>
   <h1>Dashboard</h1>
@@ -8,16 +9,54 @@
 
 <% if user_signed_in? %> 
   <% if current_user.try(:admin?) %>
-    <%= link_to "Create Project", projects_create_path %><br>
-    <%= link_to "Show All Projects", projects_path %><br>
-    <%= link_to "Show All Users", users_path %><br>
+    <div class="col-md-12">
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                    	<td><%= link_to "Create Project", projects_create_path %><br></td>
+                    </tr>
+                    <tr>
+                    	<td><%= link_to "Show All Projects", projects_path %><br></td>
+                    </tr>
+                    <tr>
+                    	<td><%= link_to "Show All Users", users_path %><br</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
   <% end %>
-  <%= link_to "Show My Projects", projects_path %><br>
-  <%= link_to "My Deadlines", deadlines_path %><br>
+  <div class="col-md-12">
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                    	<td><%= link_to "Show My Projects", projects_path %><br></td>
+                    </tr>
+                    <tr>
+                    	<td><%= link_to "My Deadlines", deadlines_path %><br></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 <% end %>
 
 
 <% if company_signed_in? %>
-  <%= link_to "Create Project", projects_create_path %><br>
-  <%= link_to "Show All Projects", projects_path %><br>
+  <div class="col-md-12">
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                    	<td><%= link_to "Create Project", projects_create_path %><br></td>
+                    </tr>
+                    <tr>
+                    	<td><%= link_to "Show All Projects", projects_path %><br></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 <% end %>

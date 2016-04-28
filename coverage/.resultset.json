@@ -121,10 +121,6 @@
         1,
         null
       ],
-      "/home/ubuntu/workspace/mak-169/app/helpers/admin/projects_helper.rb": [
-        1,
-        null
-      ],
       "/home/ubuntu/workspace/mak-169/app/helpers/contacts_helper.rb": [
         1,
         null
@@ -179,8 +175,8 @@
         1,
         null,
         1,
-        10,
-        10,
+        12,
+        12,
         null,
         null,
         1,
@@ -273,26 +269,6 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/mak-169/app/controllers/admin/projects_controller.rb": [
-        1,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/mak-169/app/controllers/admin_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        3,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
       "/home/ubuntu/workspace/mak-169/app/controllers/contacts_controller.rb": [
         1,
         1,
@@ -374,9 +350,14 @@
         1,
         1,
         null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/admin_controller.rb": [
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1461805187
+    "timestamp": 1461819945
   },
   "RSpec": {
     "coverage": {

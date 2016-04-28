@@ -12,8 +12,6 @@ Background: on the home page
   
 Scenario: links to see before I am signed up
   Then I should see "Home"
-  Then I should see "Projects"
-  Then I should see "All Projects"
   Then I should see "About Us"
   Then I should see "Contact"
   Given I follow "Sign Up"
@@ -33,7 +31,6 @@ Scenario: links to see if I am signed in
   And I press "Log in"
   Then I should not see "Mak"
   Then I should see "Projects"
-  Then I should see "All Projects"
   Then I should see "About Us"
   Then I should see "Contact"
   Then I should see "Log Out"
@@ -42,8 +39,6 @@ Scenario: links to see if I am signed out
   Given I am on the home page
   Then I should see "Sign In"
   Then I should see "Sign Up"
-  Then I should see "Projects"
-  Then I should see "All Projects"
   Then I should see "About Us"
   Then I should see "Contact"
   Then I should not see "Log Out"

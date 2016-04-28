@@ -1,0 +1,22 @@
+<div class="padding-right">
+<% if user_signed_in? or company_signed_in? %>
+  <h1>Dashboard</h1>
+<% else %>
+  <h1>Sign in to see your dashboard.</h1>
+<% end %>
+
+
+<% if user_signed_in? %> 
+  <% if current_user.try(:admin?) %>
+    <%= link_to "Create Project", projects_create_path %><br>
+    <%= link_to "Show All Projects", projects_path %><br>
+    <%= link_to "Show All Users", users_path %><br>
+  <% end %>
+  <%= link_to "Show My Projects", projects_path %><br>
+<% end %>
+
+
+<% if company_signed_in? %>
+  <%= link_to "Create Project", projects_create_path %><br>
+  <%= link_to "Show All Projects", projects_path %><br>
+<% end %>

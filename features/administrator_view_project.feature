@@ -20,8 +20,7 @@ Scenario: viewing all projects as admin
   When I fill in "user[email]" with "email@admin.com"
   When I fill in "user[password]" with "password"
   And I press "Log in"
-  Then I should be on the home page
- 
+
   And I go to the projects page
   Then I should see "foobar"
   Then I should see "a cool proj"

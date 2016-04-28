@@ -1,0 +1,22 @@
+<div class="padding-right">
+<% if user_signed_in? %>
+    <h1>Page</h1>
+<% else %>
+    <h1>Sign in to see it</h1>
+<% end %>
+
+<h1>Pages</h1>
+<table>
+<% if user_signed_in? %>
+    <% current_user.deadlines.each do |deadline| %>
+        <tr>
+            <td><%= deadline.deadline_title %></td>
+            <td><%= deadline.start_date %></td>
+        </tr>
+    <% end %>
+    <% if current_user.deadlines.empty? %>
+        <p>No deadlines</p>
+    <% end %>
+<% end %>
+</table>
+</div>

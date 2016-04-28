@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427164554) do
+ActiveRecord::Schema.define(version: 20160428074315) do
 
   create_table "assignments", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -42,6 +42,19 @@ ActiveRecord::Schema.define(version: 20160427164554) do
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true
   add_index "companies", ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
+
+  create_table "deadlines", force: :cascade do |t|
+    t.string   "deadline_title"
+    t.string   "start_date"
+    t.string   "end_date"
+    t.string   "explanation"
+    t.boolean  "status",         default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "user_id"
+  end
+
+  add_index "deadlines", ["user_id"], name: "index_deadlines_on_user_id"
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"

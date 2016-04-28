@@ -1,5 +1,9 @@
-<h1><%= @project.title %></h1>
+<h1><%= @forum.title %></h1>
 
 <div>
-    <h3> Messages</h2>
+    <h2> Messages</h2>
+    <% @messages.each do |message| %>
+        <h3><%= link_to message.title, forum_message_path(@forum,message) %></h3>
+    <%end%>
+    <%= link_to "Create New Message", new_forum_message_path(@forum) %>
 </div>

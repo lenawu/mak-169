@@ -9,12 +9,13 @@ class ForumsController < ApplicationController
                 end
             end
         else
-            @forums = Forum.All
+            @forums = Forum.all
         end
     end
     
     def show
-        @project = Forum.find(params[:id])
+        @forum = Forum.find(params[:id])
+        @messages = @forum.messages.all
     end
     
     def new

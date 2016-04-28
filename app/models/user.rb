@@ -25,6 +25,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :assignments
 	has_many :projects, :through => :assignments
+	has_many :deadlines
 	
 	#For calendar functionality
 	#def start_time

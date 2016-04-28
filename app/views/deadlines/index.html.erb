@@ -1,0 +1,32 @@
+<div class="padding-right">
+  <% if user_signed_in? %>
+    <h1>The Deadlines</h1>
+  <% else %>
+    <h1>Sign in to see the deadlines</h1>
+  <% end %>
+  
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Explanation</th>
+      <th>Status</th>
+    </tr>
+  <% if user_signed_in? %>
+    <% current_user.deadlines.each do |deadline| %>
+      <tr>
+        <td><%= deadline.deadline_title %></td>
+        <td><%= deadline.start_date %></td>
+        <td><%= deadline.end_date %></td>
+        <td><%= deadline.explanation %></td>
+        <td><%= deadline.status %></td>
+      </tr>
+    <% end %>
+  <% end %>
+  
+  <% if user_signed_in? %>
+    <%= link_to "Create Deadline", deadlines_create_path %><br>
+  <% end %>
+  </table>
+</div>

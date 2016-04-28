@@ -21,7 +21,6 @@ Scenario: Company creates project
   Given I fill in "company[password]" with "password"
   And I press "Log in"
   
-  Then I should be on the home page
   Given the following projects exist:
   | title  | description   | company     |  students    |
   | foobar | a cool proj   | Google      |  rob         |
@@ -40,7 +39,6 @@ Scenario: Admin approves project
   Given I fill in "company[email]" with "google@google.com" 
   Given I fill in "company[password]" with "password"
   And I press "Log in"
-  Then I should be on the home page
 
   Given the following projects exist:
   | title  | description   | company     |  students    |
@@ -54,7 +52,6 @@ Scenario: Admin approves project
   When I fill in "user[email]" with "email@admin.com"
   When I fill in "user[password]" with "password"
   And I press "Log in"
-  Then I should be on the home page
 
   And I go to the projects page
   Then I should see "Approve"
@@ -67,7 +64,6 @@ Scenario: Admin approves project
   Given I fill in "company[email]" with "google@google.com" 
   Given I fill in "company[password]" with "password"
   And I press "Log in"
-  Then I should be on the home page
 
   Given I go to the projects page
   Then I should see "Approved"

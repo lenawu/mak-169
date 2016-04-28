@@ -11,22 +11,6 @@ Rails.application.routes.draw do
   
   post 'projects/:id/approve/' => 'projects#approve', :as => :approve_project
 
-  namespace :admin do
-  get 'projects/new'
-  end
-
-  namespace :admin do
-  get 'projects/create'
-  end
-
-  namespace :admin do
-  get 'projects/show'
-  end
-
-  namespace :admin do
-  get 'projects/index'
-  end
-
   root 'info#home'
 
   get 'info/about'
@@ -38,6 +22,8 @@ Rails.application.routes.draw do
   get 'info/student'
 
   get 'info/projects'
+  
+  get 'info/dashboard'
   
   #namespaced route
   namespace :admin do

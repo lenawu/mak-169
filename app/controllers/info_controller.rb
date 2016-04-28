@@ -16,4 +16,8 @@ class InfoController < ApplicationController
 
   def projects
   end
+  
+  def dashboard
+  end
+
 end

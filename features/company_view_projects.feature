@@ -22,8 +22,7 @@ Scenario: Company Representative signing in
     Given I fill in "Email" with "comp@company.com" 
     Given I fill in "Password" with "password"
     And I press "Log in"
-    Then I am on the home page
-    
+
 Scenario: Company Representatives see list of projects
     Given I am on the home page
     Given the company with the name "comp" owns the project named "proj1"
@@ -32,7 +31,6 @@ Scenario: Company Representatives see list of projects
     Given I fill in "company[email]" with "comp@company.com" 
     Given I fill in "company[password]" with "password"
     And I press "Log in"
-    Then I should be on the home page
     And I should see "Projects"
     When I follow "Projects"
 	Then I should be on the projects index

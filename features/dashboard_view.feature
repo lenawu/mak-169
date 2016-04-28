@@ -1,4 +1,3 @@
-@wip
 Feature: Users should have a dashboard
   
   As a user, 
@@ -10,19 +9,17 @@ Background:
   | email              | password  | admin |
   | email@berkeley.com | password  | true  |
   | email1@berkeley.com | password1 | false |
+  
 Scenario: viewing the dashboard when I am signed in
   Given I am on the home page
   When I follow "Sign In"
-  When I fill in "Email" with "email1@berkeley.com"
-  When I fill in "Password" with "password1"
-  And I press "Log In"
-  Then I should be on the home page
-  When I follow "dashboard"
+  When I fill in "user[email]" with "email1@berkeley.com"
+  When I fill in "user[password]" with "password1"
+  And I press "Log in"
+  Given I am on the dashboard 
   Then I should see "My Projects"
-  Then I should see "Messages"
-  
+
 Scenario: viewing the dashboard when I am not signed in
-  Given I am on the home page
-  When I follow "dashboard"
-  Then I should be on the home page
+  Given I am on the dashboard
+  Then I should see "Sign in to see your dashboard"
   

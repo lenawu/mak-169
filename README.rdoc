@@ -8,6 +8,12 @@ GPA :: {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/gpa.svg" 
 Issue Count :: {<img src="https://codeclimate.com/github/lenawu/mak-169/badges/issue_count.svg" />}[https://codeclimate.com/github/lenawu/mak-169/issues]
 Pivotal Tracker :: https://www.pivotaltracker.com/n/projects/1542641
 
+== Purpose
+
+    Mak is a social enterprise devoted to empowering urban low-income high school students to become designers.
+    Mak students learn 3D design through an intensive training program.
+    Mak then hires the students as interns to work on projects for partner startups, setting them up for future careers.
+
 == Using Git
 
 To make and submit changes:

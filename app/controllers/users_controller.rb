@@ -30,11 +30,11 @@ class UsersController < ApplicationController
     #end
     
     #For dashboard functionality
-    # def show
-    #     @user = User.find(params[:id])
+    def show
+        @user = User.find(params[:id])
     
-    #     respond_to do |format|
+    #    respond_to do |format|
     #          format.html
     #          format.xml { render :xml => @user }
-    # end
+    end
 end

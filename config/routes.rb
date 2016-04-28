@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  
+  get "deadlines/create" => "deadlines#create"
+  post "deadlines/create" => "deadlines#create"
+  get "deadlines" => "deadlines#index"
+  get "deadlines/:id" => "deadline#index"
+  
   devise_for :companies
   get 'projects/create' => 'projects#create'
 

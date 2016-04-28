@@ -1,0 +1,12 @@
+= simple_form_for(@deadline) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :deadline_title
+    = f.input :start_date
+    = f.input :end_date
+    = f.input :explanation
+    = f.input :status
+
+  .form-actions
+    = f.button :submit

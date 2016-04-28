@@ -1,0 +1,17 @@
+<h1>Create New Deadline</h1>
+<%= form_for :deadline do %>
+    
+    <%= label :deadline, :deadline_title, "Title" %>
+    <%= text_field :deadline, :deadline_title %>
+    
+    <%= label :deadline, :start_date, "Start Date" %>
+    <%= text_field :deadline, :start_date %>
+    
+    <%= label :deadline, :end_date, "End Date" %>
+    <%= text_field :deadline, :end_date %>
+    
+    <%= label :deadline, :explanation, "Explanation" %>
+    <%= text_field :deadline, :explanation %>
+    
+    <div><%= submit_tag "Save" %></div>
+<% end %>

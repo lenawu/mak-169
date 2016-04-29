@@ -15,6 +15,12 @@ Rails.application.routes.draw do
   #       post 'toggle'
   #     end  
   
+  resources :forums do
+    resources :messages do 
+      resources :comments 
+    end
+  end
+  
   post 'projects/:id/approve/' => 'projects#approve', :as => :approve_project
 
   root 'info#home'

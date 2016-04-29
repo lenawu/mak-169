@@ -1,0 +1,5 @@
+<h1>Message Board</h1>
+<% @forums.each do |forum| %>
+    <h2><%= link_to forum.title, forum_path(forum) %></h2>
+
+<%end%>

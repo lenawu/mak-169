@@ -1,0 +1,14 @@
+<h1><%= @message.title %></h1>
+<small>Posted by <%= @message.author %> <%= time_ago_in_words(@message.created_at) %> ago </small>
+<h3><%= @message.description %></h3>
+
+<h2>Comments:</h2>
+
+<%= render @message.comments %>
+
+<h3>Reply to Message:</h3>
+<%= render "comments/form" %>
+
+<div><%= link_to "Edit message", edit_forum_message_path(@forum,@message)%></div>
+<div><%= link_to "Delete message", forum_message_path(@forum,@message), method: :delete, data: {confirm: "delete for realz?"}%></div>
+<div><%= link_to "Back to forum", forum_path(@forum)%></div>

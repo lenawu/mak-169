@@ -48,5 +48,4 @@ Scenario: Viewing all of company Make's students
 	Then I should see "Student Two"
 	Then I should not see "Student Three"
 	Then I should see "spec1.com"
-	Then I should see "10"
 

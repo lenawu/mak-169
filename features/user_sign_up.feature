@@ -16,11 +16,10 @@ Scenario: Signing in
 	| user[email]       | email@berkeley.edu  |
 	| user[password]    | password            |
   And I press "Log in"
-  Then I should be on the home page
   Then I should not see "Sign In"
   Then I should not see "Sign Up"
   Then I should see "Log Out"
-  Then I should see "Home"
+  Then I should see "Dashboard"
 
 Scenario: Email already exists
   When I follow "Sign Up"

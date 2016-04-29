@@ -216,6 +216,7 @@ header ul { padding-top: 35px; }
 header ul li { list-style: none; float: left; text-transform: uppercase; letter-spacing: 2px; }
 header ul li a { display: block; margin: 0 30px; color: #4d4959; }
 .r_spacer { margin-right: 180px; }
+.r_spacer2 { margin-right: 120px; }
 .intro { padding: 115px 0; background-color: #fbfbfb; }
 .padding-top {padding: 15px; background-color: #f4f5fc; }
 .padding-right {padding: 80px; }
@@ -285,3 +286,5 @@ footer p { font-size: 13px; margin: 0; }
 .wp1, .wp2, .wp3, .wp4, .wp5, .wp6 { visibility: hidden; }
 .bounceInLeft, .bounceInRight, .fadeInUp { visibility: visible; }
 table td, table th { padding: 5px; }
+
+.pure-button { padding: .5em 1em; display: inline-block; background: rgb(66, 184, 221); border-radius: 4px; color: white; }

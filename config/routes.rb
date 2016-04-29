@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  
+  get "deadlines/create" => "deadlines#create"
+  post "deadlines/create" => "deadlines#create"
+  get "deadlines" => "deadlines#index"
+  get "deadlines/:id" => "deadline#index"
+  
   devise_for :companies
   get 'projects/create' => 'projects#create'
 
@@ -17,22 +23,6 @@ Rails.application.routes.draw do
   
   post 'projects/:id/approve/' => 'projects#approve', :as => :approve_project
 
-  namespace :admin do
-  get 'projects/new'
-  end
-
-  namespace :admin do
-  get 'projects/create'
-  end
-
-  namespace :admin do
-  get 'projects/show'
-  end
-
-  namespace :admin do
-  get 'projects/index'
-  end
-
   root 'info#home'
 
   get 'info/about'
@@ -44,6 +34,8 @@ Rails.application.routes.draw do
   get 'info/student'
 
   get 'info/projects'
+  
+  get 'info/dashboard'
   
   #namespaced route
   namespace :admin do
@@ -58,6 +50,7 @@ Rails.application.routes.draw do
   
   get 'users' => 'users#index'
   get 'projects' => 'projects#index'
+  get 'projects/:id' => 'projects#show', :as => :project
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

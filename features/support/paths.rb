@@ -15,7 +15,10 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
-    
+      
+    when /^the dashboard$/
+      '/info/dashboard'
+      
     when /^the contact\s?page$/
       '/contacts/new'
       

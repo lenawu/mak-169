@@ -9,7 +9,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-offset-2">
 						<nav>
 						 <!-- <%= link_to root_path do %>-->
 						 <a href="/">
@@ -20,23 +20,26 @@
 							<ul class="clearfix">
 							  <% if user_signed_in? %>
                   				<li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "page-link" %></li>
+                  				<li class="dot">.</li>
+                  				<li><%= link_to "Deadlines", deadlines_path,  class: "page-link r_spacer2" %></li>
                 			  <% elsif company_signed_in? %>
                 			  	<li><%= link_to "Log Out", destroy_company_session_path, method: :delete, class: "page-link" %></li>
+                                <li class="dot">.</li>
+								<li><%= link_to "Home Page", root_path, class: "page-link r_spacer2" %></li>
                 			  <% else %>
                   				<li><%= link_to "Sign In", new_user_session_path, class: "page-link" %></li>
                   				<li class="dot">.</li>
                   				<li><%= link_to "Sign Up", new_user_registration_path, class: "page-link r_spacer" %></li>
                 			  <% end %>
-								<li> <%= link_to "About Us", info_about_path, class: "page-link"%></li>
+                			  <% if user_signed_in? or company_signed_in? %>
+							    <li><%= link_to "Projects", projects_path, class: "page-link"%></li>
+							    <li class="dot">.</li>
+							    <li><%= link_to "Dashboard", info_dashboard_path, class: "page-link"%></li>
+                			  <%else%>
+                			    <li> <%= link_to "About Us", info_about_path, class: "page-link"%></li>
 								<li class="dot">.</li>
 								<li><%= link_to "Contact", new_contact_path, class: "page-link"%></li>
-							  <% if user_signed_in? or company_signed_in? %>
-							    <li><%= link_to "Projects", projects_path, class: "page-link"%></li>
-                			  <% end %>
-								<li><%= link_to "All Projects", admin_projects_index_path, class: "page-link"%></li>
-							  <% if user_signed_in? or company_signed_in? %>
-							    <li style="float: left"><%= link_to "Message Board", forums_path, class: "page-link"%></li>
-                			  <% end %>
+							  <% end %>
 							</ul>
 						</nav>
 					</div>

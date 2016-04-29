@@ -27,6 +27,8 @@ class User < ActiveRecord::Base
 	has_many :projects, :through => :assignments
   has_many :messages
   has_many :comments
+	has_many :deadlines
+	
 	#For calendar functionality
 	#def start_time
 	  #created_at

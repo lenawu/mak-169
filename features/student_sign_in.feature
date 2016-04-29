@@ -20,11 +20,10 @@ Scenario: Signing in
   	  | user[email]    | email@berkeley.com |
   	  | user[password] | password           |
 	And I press "Log in"
-	Then I should be on the home page
 	Then I should not see "Sign In"
 	Then I should not see "Sign Up"
 	Then I should see "Log Out"
-	Then I should see "Home"
+	Then I should see "Dashboard"
 
 Scenario: Signing out
   	Given I am on the home page
@@ -32,7 +31,6 @@ Scenario: Signing out
   	When I fill in "Email" with "mail@berkeley.edu"
   	When I fill in "Password" with "password"
   	And I press "Log in"
-	Then I am on the home page
 	Then I should see "Log Out"
 	Given I follow "Log Out"
 	Then I am currently on the home page

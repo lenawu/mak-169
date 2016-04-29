@@ -7,15 +7,15 @@ Feature: Students should be able to view the bulletin board
     
 Background: Users exist
 Given the following users exist:
-    | email               | password  |
-	| email@berkeley.com  | password1 |
+    | email               | password  | id |
+	| email@berkeley.com  | password1 | 1  |
 Given the following forums exist:
     | title | id|
     | Forum1| 1 |
 Given the following messages exist:
     | title | id | description           | forum_id| author             |
     | Hello | 1  |Just wanted to say hi  |1        | email@berkeley.com |
-
+Given the following projects exist
 Scenario: There should be a bulletin board page
   Given I am on the home page
   When I follow "Sign In"
@@ -69,3 +69,18 @@ Scenario: Editing and Deleting Messages
     When I follow "Delete message"
     Then I am on the messageboard
     And I should not see "Bye"
+    
+Scenario: Creating Comments
+    Given I sign in with "email@berkeley.com" and "password1"
+    And I am on the messageboard
+    When I follow "Forum1"
+    Then I should see "Hello"
+    When I follow "Hello"
+    Then I should see "Comments"
+    When I fill in "Comment" with "I volunteer to do this project"
+    And I press "Create Comment"
+    Then I should see "I volunteer to do this project"
+    And I should see "Edit"
+    When I press "Edit"
+    Then I should see "Edit Comment"
+    

@@ -128,6 +128,10 @@ Given /I create a project/ do |project_table|
   fail "Unimplemented"
 end
 
+Given /I press the first "([^"]*)"/ do |button_name|
+  click_button(button_name, :match => :first)
+end
+
 
 # End of custom step definitions
 

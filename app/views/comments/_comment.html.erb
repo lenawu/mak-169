@@ -10,7 +10,7 @@
 <% elsif company_signed_in? %>
     <%if comment.author == current_company.email %>
         <%= link_to "Edit", edit_forum_message_comment_path(comment.message.forum, comment.message, comment) %>
-        <%= link_to "Delete", forum_message_comment_path(@forum, @message), method: :delete, data: {confirm: "Are you sure you want to delete this important message?"}%>
+        <%= link_to "Delete", forum_message_comment_path(@forum, @message, comment), method: :delete, data: {confirm: "Are you sure you want to delete this important message?"}%>
     <% end %>
 <% end %>
 </div>

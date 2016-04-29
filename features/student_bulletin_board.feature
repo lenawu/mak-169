@@ -8,18 +8,44 @@ Feature: Students should be able to view the bulletin board
 Background: Users exist
 Given the following users exist:
     | email               | password  |
-	| email@berkeley.com  | password  |
+	| email@berkeley.com  | password1 |
+Given the following forums exist:
+    | title | id|
+    | Forum1| 1 |
+    
 
 Scenario: There should be a bulletin board page
-    Given I sign in with "email@berkeley.com" and "password"
-    And I am on the home page
-    When I follow "Bulletin Board"
-    Then I should be on the bulletin board page
+  Given I am on the home page
+  When I follow "Sign In"
+  When I fill in "user[email]" with "email@berkeley.com"
+  When I fill in "user[password]" with "password1"
+  And I press "Log in"
+  Given I am on the dashboard 
+  Then I should see "Message Board"
+  When I follow "Message Board"
+  Then I should see "Message Board"
     
-Scenario: Creating new posts and viewing posts
+Scenario: Viewing Forums
     Given I sign in with "email@berkeley.com" and "password"
-    And I am on the bulletin board page
-    Then I should see "Create post"
+    And I am on the messageboard
+    Then I should see "Forum1"
+    
+Scenario: Viewing and Creating Messages
+    Given I sign in with "email@berkeley.com" and "password"
+    And I am on the messageboard
+    Then I should see "Forum1"
+    When I follow "Forum1"
+    Then I should see "Messages"
+    And I should see "Create New Message"
+    When I follow "Create New Message"
+    Then I should be on the new message page
+    When I fill in "Message Title" with "Hello Everybody"
+    And I fill in "Description" with "this is the description"
+    And I press "Create Message"
+    Then I should be on the message page
+    
+    
+    
     When I follow "Create post"
     And fill in topic with "topic1"
     And fill in subject with "cool convo number 1"

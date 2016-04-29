@@ -59,6 +59,13 @@ Given /the following projects exist:/ do |projects_table|
   end
 end
 
+Given /the following forums exist:/ do |forums_table|
+  forums_table.hashes.each do |forum|
+    # each returned element will be a hash whose key is the table header.
+    p = Forum.create!({:title => forum["title"]})
+  end
+end
+
 Given /the following companies exist:/ do |companies_table|
   companies_table.hashes.each do |company|
     # each returned element will be a hash whose key is the table header.

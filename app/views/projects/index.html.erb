@@ -11,7 +11,6 @@
     <th>Title</th>
     <th>Description</th>
     <th>Spec URLs</th>
-    <th>Project ID</th>
     <th>Students</th>
     <th>Approval</th>
   </tr>
@@ -25,10 +24,9 @@
                 <%= project.company.name %>
             <% end %>
         </td>
-        <td><%= project.title %></td>
+        <td><%= link_to project.title, project_path(project) %></td>
         <td><%= project.description %></td>
         <td><%= project.spec_urls %></td>
-        <td><%= project.proj_id %></td>
         <td><%= project.students %></td>
         <td>
           <% if project.approved %>
@@ -49,10 +47,9 @@
               <%= project.company.name %>
           <% end %>
       </td>
-      <td><%= project.title %></td>
+      <td><%= link_to project.title, project_path(project) %></td>
       <td><%= project.description %></td>
       <td><%= project.spec_urls %></td>
-      <td><%= project.proj_id %></td>
       <td><%= project.students %></td>
       <td><%= project.approved %></td>
     </tr>
@@ -71,10 +68,9 @@
               <%= project.company.email %>
           <% end %>
       </td>
-      <td><%= project.title %></td>
+      <td><%= link_to project.title, project_path(project) %></td>
       <td><%= project.description %></td>
       <td><%= project.spec_urls %></td>
-      <td><%= project.proj_id %></td>
       <td><%= project.students %></td>
       <td>
         <% if project.approved %>

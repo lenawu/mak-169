@@ -31,7 +31,7 @@
           <% if project.users.empty? %>
             None
           <% else %>
-          <%= project.users.each do |user| %>
+          <% project.users.each do |user| %>
             <div><%= user.email %></div>
           <% end %>
           <% end %>
@@ -62,12 +62,18 @@
         <% if project.users.empty? %>
             None
           <% else %>
-          <%= project.users.each do |user| %>
+          <% project.users.each do |user| %>
             <div><%= user.email %></div>
           <% end %>
         <% end %>
       </td>
-      <td><%= project.approved %></td>
+      <td>
+        <% if project.approved %>
+          <span class="success-color">Approved</span>
+        <% else %>
+          <span class="warning-color">Pending</span>
+        <% end %>
+      </td>
     </tr>
   <% end %>
   <% if current_user.projects.empty? %>

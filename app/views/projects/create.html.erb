@@ -3,19 +3,14 @@
 <%= form_for :project do %>
 
  <%= label :project, :title, 'Title' %>
- <%= text_field :project, :title %>
+ <%= text_field :project, :title %><br>
 
  <%= label :project, :description, 'Description' %>
- <%= text_field :project, :description %>
+ <%= text_field :project, :description %><br>
 
  <%= label :project, :spec_urls, 'Spec URL' %>
- <%= text_field :project, :spec_urls %>
- 
- <%= label :project, :proj_id, 'Project ID' %>
- <%= text_field :project, :proj_id %>
- 
- <%= label :project, :students, 'Student' %>
- <%= text_field :project, :students %>
+ <%= text_field :project, :spec_urls %><br>
+
  
   <div><%= submit_tag 'Save' %></div>
 <% end %>

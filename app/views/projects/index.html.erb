@@ -24,10 +24,18 @@
                 <%= project.company.name %>
             <% end %>
         </td>
-        <td><%= link_to project.title, project_path(project) %></td>
+        <td><%= link_to project.title, project_path(project), class:"small-button button-blue" %></td>
         <td><%= project.description %></td>
         <td><%= project.spec_urls %></td>
-        <td><%= project.students %></td>
+        <td>
+          <% if project.users.empty? %>
+            None
+          <% else %>
+          <%= project.users.each do |user| %>
+            <div><%= user.email %></div>
+          <% end %>
+          <% end %>
+        </td>
         <td>
           <% if project.approved %>
             <span class="success-color">Approved</span>
@@ -47,10 +55,18 @@
               <%= project.company.name %>
           <% end %>
       </td>
-      <td><%= link_to project.title, project_path(project) %></td>
+      <td><%= link_to project.title, project_path(project), class:"small-button button-blue" %></td>
       <td><%= project.description %></td>
       <td><%= project.spec_urls %></td>
-      <td><%= project.students %></td>
+      <td>
+        <% if project.users.empty? %>
+            None
+          <% else %>
+          <%= project.users.each do |user| %>
+            <div><%= user.email %></div>
+          <% end %>
+        <% end %>
+      </td>
       <td><%= project.approved %></td>
     </tr>
   <% end %>
@@ -60,7 +76,7 @@
 <% end %>
 
 <% if company_signed_in? %>
-  <%= link_to "Create Project", projects_create_path %><br>
+  <%= link_to "Create Project", projects_create_path, class:"pure-button button-green" %><br>
   <% current_company.projects.each do |project| %>
     <tr>
       <td>
@@ -68,10 +84,18 @@
               <%= project.company.email %>
           <% end %>
       </td>
-      <td><%= link_to project.title, project_path(project) %></td>
+      <td><%= link_to project.title, project_path(project), class:"small-button button-blue" %></td>
       <td><%= project.description %></td>
       <td><%= project.spec_urls %></td>
-      <td><%= project.students %></td>
+      <td>
+        <% if project.users.empty? %>
+            None
+        <% else %>
+          <% project.users.each do |user| %>
+            <div><%= user.email %></div>
+          <% end %>
+        <% end %>
+      </td>
       <td>
         <% if project.approved %>
           <span class="success-color">Approved</span>

@@ -1,24 +1,35 @@
+<div class="padding-right">
 <h1><%= @message.title %></h1>
 <small>Posted by <%= @message.author %> <%= time_ago_in_words(@message.created_at) %> ago </small>
-<h3><%= @message.description %></h3>
+<h3>"<%= @message.description %>"</h3>
 
-<h2>Comments:</h2>
+<% if user_signed_in? %>
+    <% if @message.author == current_user.email %>
+        <div>
+            <%= link_to "Edit message", edit_forum_message_path(@forum,@message), class:"small-button button-yellow" %>
+            <%= link_to "Delete message", forum_message_path(@forum,@message), method: :delete, data: {confirm: "Are you sure you want to delete this important message?"}, class:"small-button button-red" %>
+        </div>
+    <% end %>
+<% elsif company_signed_in? %>
+    <%if @message.author == current_company.email %>
+        <div>
+            <%= link_to "Edit message", edit_forum_message_path(@forum,@message), class:"small-button button-yellow" %>
+            <%= link_to "Delete message", forum_message_path(@forum,@message), method: :delete, data: {confirm: "Are you sure you want to delete this important message?"}, class:"small-button button-red" %>
+        </div>
+    <% end %>
+<% end %>
 
+<hr>
+<h2>Comments</h2>
+<% if @message.comments.empty? %>
+    <div>No comments to display.</div>
+<% end %>
 <%= render @message.comments %>
+<hr>
 
 <h3>Reply to Message:</h3>
 <%= render "comments/form" %>
 
-<% if user_signed_in? %>
-    <% if @message.author == current_user.email %>
-        <div><%= link_to "Edit message", edit_forum_message_path(@forum,@message)%></div>
-        <div><%= link_to "Delete message", forum_message_path(@forum,@message), method: :delete, data: {confirm: "Are you sure you want to delete this important message?"}%></div>
-    <% end %>
-<% elsif company_signed_in? %>
-    <%if @message.author == current_company.email %>
-        <div><%= link_to "Edit message", edit_forum_message_path(@forum,@message)%></div>
-        <div><%= link_to "Delete message", forum_message_path(@forum,@message), method: :delete, data: {confirm: "Are you sure you want to delete this important message?"}%></div>
-    <% end %>
-<% end %>
+<div><%= link_to "Back to forum", forum_path(@forum), class:"pure-button button-blue" %></div>
 </div>
-<div><%= link_to "Back to forum", forum_path(@forum)%></div>
+

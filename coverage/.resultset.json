@@ -66,6 +66,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null,
         null,
@@ -128,6 +130,10 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
       "/home/ubuntu/workspace/mak-169/app/helpers/contacts_helper.rb": [
         1,
         null
@@ -136,7 +142,15 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/forums_helper.rb": [
+        1,
+        null
+      ],
       "/home/ubuntu/workspace/mak-169/app/helpers/info_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/mak-169/app/helpers/message_helper.rb": [
         1,
         null
       ],
@@ -161,6 +175,7 @@
         null,
         1,
         null,
+        1,
         1,
         1,
         null,
@@ -191,6 +206,8 @@
         null,
         null,
         1,
+        0,
+        0,
         0,
         0,
         0,
@@ -452,12 +469,138 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/mak-169/app/models/message.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/comment.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/models/forum.rb": [
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/comments_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/messages_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/home/ubuntu/workspace/mak-169/app/controllers/admin_controller.rb": [
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/mak-169/app/controllers/forums_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1461897386
+    "timestamp": 1461901091
   }
 }

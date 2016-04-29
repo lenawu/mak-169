@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428074315) do
+ActiveRecord::Schema.define(version: 20160429033833) do
 
   create_table "assignments", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -53,23 +53,6 @@ ActiveRecord::Schema.define(version: 20160428074315) do
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true
   add_index "companies", ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
 
-<<<<<<< HEAD
-  create_table "forums", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "forum_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "description"
-    t.string   "author"
-  end
-=======
   create_table "deadlines", force: :cascade do |t|
     t.string   "deadline_title"
     t.string   "start_date"
@@ -82,7 +65,22 @@ ActiveRecord::Schema.define(version: 20160428074315) do
   end
 
   add_index "deadlines", ["user_id"], name: "index_deadlines_on_user_id"
->>>>>>> e462f2972940c0498da7815bcce9d7f5c9e28ad4
+
+  create_table "forums", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "forum_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "author"
+    t.string   "description"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"

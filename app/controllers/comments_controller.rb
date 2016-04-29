@@ -15,6 +15,30 @@ class CommentsController < ApplicationController
         end
     end
     
+    def edit
+        @forum = Forum.find(params[:forum_id])
+        @message = @forum.messages.find(params[:message_id])
+        @comment = @message.comments.find(params[:id])
+    end
+    
+    def update
+        @forum = Forum.find(params[:forum_id])
+        @message = @forum.messages.find(params[:message_id])
+        @comment = @message.comments.find(params[:id])
+        if @comment.update(comment_params)
+            redirect_to forum_message_path(@forum,@message)
+        else 
+            render "edit"
+        end
+    end
+    
+    def destroy
+        @forum = Forum.find(params[:forum_id])
+        @message = @forum.messages.find(params[:message_id])
+        @comment = @message.comments.find(params[:id])
+        @comment.destroy
+        redirect_to forum_message_path(@forum, @message)
+    end
     def new
     end
     

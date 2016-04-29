@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   end
   
   post 'projects/:id/approve/' => 'projects#approve', :as => :approve_project
+  post 'projects/:id1/assign/:id2' => 'projects#assign', :as => :assign_project_user
 
   root 'info#home'
 

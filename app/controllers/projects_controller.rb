@@ -51,4 +51,11 @@ class ProjectsController < ApplicationController
         @project.update_attribute(:approved, true)
         redirect_to projects_path
     end
+    
+    def assign
+        @project = Project.find(params[:id1])
+        @user = User.find(params[:id2])
+        @project.users << @user
+        redirect_to project_path(@project)
+    end
 end

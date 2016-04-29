@@ -30,7 +30,7 @@
         <td><%= project.students %></td>
         <td>
           <% if project.approved %>
-            Approved.
+            <span class="success-color">Approved</span>
           <% else %>
             <%= button_to [:approve, project] do %>
               Approve
@@ -74,14 +74,14 @@
       <td><%= project.students %></td>
       <td>
         <% if project.approved %>
-          Approved.
+          <span class="success-color">Approved</span>
         <% else %>
           <% if current_user.try(:admin?) %>
             <%= button_to [:approve, project] do %>
               Approve
             <% end %>
           <% else %>
-            Pending.
+            <span class="warning-color">Pending</span>
           <% end %>
         <% end %>
       </td>

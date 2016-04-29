@@ -294,6 +294,9 @@ table td, table th { padding: 5px; }
 .button-blue { background: rgb(66, 184, 221); }
 .button-yellow { background: rgb(223, 117, 20); }
 .button-green { background: rgb(28, 184, 65); }
+.button-red { background: rgb(202, 60, 60); }
 
 .warning-color { color: rgb(223, 117, 20); }
 .success-color { color: rgb(28, 184, 65); }
+.underline { text-decoration: underline; }
+.underline:hover { text-decoration: underline; }

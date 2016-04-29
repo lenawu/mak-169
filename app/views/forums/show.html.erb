@@ -1,9 +1,27 @@
+<div class="padding-right">
 <h1><%= @forum.title %></h1>
 
 <div>
     <h2> Messages</h2>
-    <% @messages.each do |message| %>
-        <h3><%= link_to message.title, forum_message_path(@forum,message) %></h3>
-    <%end%>
-    <%= link_to "Create New Message", new_forum_message_path(@forum) %>
+    <% if @messages.empty? %>
+        <div>No messages yet.</div>
+    <% else %>
+        <table>
+            <tr>
+                <th>message title</th>
+                <th>author</th>
+                <th>time</th>
+            </tr>
+        <% @messages.each do |message| %>
+            <tr>
+                <td><%= link_to message.title, forum_message_path(@forum,message), class:"underline" %></td>
+                <td><%= message.author %></td>
+                <td><%= time_ago_in_words(message.created_at) %> ago</td>
+            </tr>
+        <% end %>
+        </table>
+    <% end %>
+    <br>
+    <%= link_to "Create New Message", new_forum_message_path(@forum), class:"pure-button button-green" %>
+</div>
 </div>

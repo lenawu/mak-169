@@ -3,7 +3,9 @@ class MessagesController < ApplicationController
         @forum = Forum.find(params[:forum_id])
         @message = @forum.messages.create(message_params)
         if user_signed_in?
-            @message.user_id = current_user.id
+            @message.author = current_user.email
+        elsif company_signed_in?
+            @message.author = current_company.email
         end
         if @message.save
             redirect_to forum_message_path(@forum,@message)
@@ -21,6 +23,7 @@ class MessagesController < ApplicationController
         @forum = Forum.find(params[:forum_id])
         @message = Message.new
     end
+    
     def edit
         @forum = Forum.find(params[:forum_id])
         @message = @forum.messages.find(params[:id])

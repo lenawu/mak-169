@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428083439) do
+ActiveRecord::Schema.define(version: 20160429022117) do
 
   create_table "assignments", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20160428083439) do
   end
 
   add_index "assignments", ["project_id", "user_id"], name: "index_assignments_on_project_id_and_user_id"
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "message_id"
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["message_id"], name: "index_comments_on_message_id"
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -56,7 +66,7 @@ ActiveRecord::Schema.define(version: 20160428083439) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "description"
-    t.integer  "user_id"
+    t.string   "author"
   end
 
   create_table "projects", force: :cascade do |t|

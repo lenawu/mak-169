@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   #     end  
   
   resources :forums do
-    resources :messages
+    resources :messages do 
+      resources :comments 
+    end
   end
   
   post 'projects/:id/approve/' => 'projects#approve', :as => :approve_project

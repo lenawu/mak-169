@@ -8,8 +8,16 @@ class ForumsController < ApplicationController
                     @forums << project.forum
                 end
             end
+        elsif user_signed_in?
+            @projects = current_user.projects
+            @forums = []
+            @projects.each do |project| 
+                if project.forum
+                    @forums << project.forum
+                end
+            end
         else
-            @forums = Forum.all
+            @projects = []
         end
     end
     

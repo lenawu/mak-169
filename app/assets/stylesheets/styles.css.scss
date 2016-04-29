@@ -288,7 +288,9 @@ footer p { font-size: 13px; margin: 0; }
 table td, table th { padding: 5px; }
 
 .pure-button { padding: .5em 1em; display: inline-block; border-radius: 4px; color: white; margin: 1px; }
+.small-button { padding: .25em .5em; display: inline-block; border-radius: 4px; color: white; margin: 1px; }
 .pure-button:hover { color: white; }
+.small-button:hover { color: white; }
 .button-blue { background: rgb(66, 184, 221); }
 .button-yellow { background: rgb(223, 117, 20); }
 .button-green { background: rgb(28, 184, 65); }

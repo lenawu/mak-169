@@ -19,14 +19,14 @@ module NavigationHelpers
     when /^the dashboard$/
       '/info/dashboard'
       
-    when /^the message$/
-      'forums/1/messages/1'
+    when /^the message page$/
+      '/forums/1/messages/'
       
     when /^the messageboard/
       '/forums'
       
-    when /^ the new message/
-      'forums/1/messages/new'
+    when /^the new message page$/
+      '/forums/1/messages/new'
       
     when /^the contact\s?page$/
       '/contacts/new'

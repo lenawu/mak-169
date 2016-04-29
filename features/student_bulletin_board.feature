@@ -12,7 +12,9 @@ Given the following users exist:
 Given the following forums exist:
     | title | id|
     | Forum1| 1 |
-    
+Given the following messages exist:
+    | title | id | description           | forum_id| author             |
+    | Hello | 1  |Just wanted to say hi  |1        | email@berkeley.com |
 
 Scenario: There should be a bulletin board page
   Given I am on the home page
@@ -26,12 +28,12 @@ Scenario: There should be a bulletin board page
   Then I should see "Message Board"
     
 Scenario: Viewing Forums
-    Given I sign in with "email@berkeley.com" and "password"
+    Given I sign in with "email@berkeley.com" and "password1"
     And I am on the messageboard
     Then I should see "Forum1"
     
 Scenario: Viewing and Creating Messages
-    Given I sign in with "email@berkeley.com" and "password"
+    Given I sign in with "email@berkeley.com" and "password1"
     And I am on the messageboard
     Then I should see "Forum1"
     When I follow "Forum1"
@@ -42,16 +44,28 @@ Scenario: Viewing and Creating Messages
     When I fill in "Message Title" with "Hello Everybody"
     And I fill in "Description" with "this is the description"
     And I press "Create Message"
-    Then I should be on the message page
-    
-    
-    
-    When I follow "Create post"
-    And fill in topic with "topic1"
-    And fill in subject with "cool convo number 1"
-    And I click "submit"
-    Then I should be on the bulletin board page
-    And I should see "topic1"
-    When I follow "topic1"
-    Then I should see "cool convo number1"
+    Then I should see "Hello Everybody"
+    And I should see "this is the description"
 
+Scenario: Editing and Deleting Messages
+    Given I sign in with "email@berkeley.com" and "password1"
+    And I am on the messageboard
+    When I follow "Forum1"
+    Then I should see "Messages"
+    And I should see "Hello"
+    When I follow "Create New Message"
+    Then I should be on the new message page
+    When I fill in "Message Title" with "Hello Everybody"
+    And I fill in "Description" with "this is the description"
+    And I press "Create Message"
+    Then I should see "Edit message"
+    And I should see "Delete message"
+    When I follow "Edit message"
+    And I fill in "Message Title" with "Bye"
+    And I fill in "Description" with "byebyeyeye"
+    And I press "Update Message"
+    Then I should see "Bye"
+    And I should see "byebyeyeye"
+    When I follow "Delete message"
+    Then I am on the messageboard
+    And I should not see "Bye"

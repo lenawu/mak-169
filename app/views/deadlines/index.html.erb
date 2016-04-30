@@ -1,8 +1,8 @@
 <div class="padding-right">
   <% if user_signed_in? %>
-    <h1>The Deadlines</h1>
+    <h1>My Deadlines</h1>
   <% else %>
-    <h1>Sign in to see the deadlines</h1>
+    <h1>Sign in to see your deadlines</h1>
   <% end %>
   
   <table>
@@ -26,7 +26,7 @@
   <% end %>
   
   <% if user_signed_in? %>
-    <%= link_to "Create Deadlines", deadlines_create_path %><br>
+    <%= link_to "Create Deadlines", deadlines_create_path, class:"small-button button-blue" %><br>
   <% end %>
   </table>
 </div>

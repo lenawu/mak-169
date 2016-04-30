@@ -1,4 +1,3 @@
-
 Feature: Students should be able to view deadlines
     As a student,
     So that I can keep track of project progress,
@@ -19,16 +18,12 @@ Background: student, company, and project exist
     
 Scenario: student will add and view deadlines
     Given I am on the home page
-    #When I sign in with email "student@email.com" and password "password"
-    #Given I am on the user page
     When I follow "Sign In"
     When I fill in "Email" with "student@email.com"
     When I fill in "Password" with "password"
     And I press "Log in"
-    #Then I should see "proj1"
-    #When I press "New Event"
     When I follow "My Deadlines"
-    Then I should see "The Deadlines"
+    Then I should see "My Deadlines"
     When I follow "Create Deadline"
     Then I should see "Create New Deadline"
     And I fill in "Title" with "Start"
@@ -39,6 +34,3 @@ Scenario: student will add and view deadlines
     Then I should see "Start"
     Then I should see "Today"
     Then I should see "Tomorrow"
-
-
-    

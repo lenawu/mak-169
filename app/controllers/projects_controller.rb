@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
             @company.projects << @project
             @forum = Forum.create(:title =>@project.title)
             @project.forum = @forum
-            flash[:notice] = "#{@project.title} was successfully created."
+            #flash[:notice] = "#{@project.title} was successfully created."
             redirect_to projects_path
         end
     end
@@ -73,10 +73,10 @@ class ProjectsController < ApplicationController
             @project.update(project_params)
             redirect_to project_path(@project)
             # flash[:success] = "Profile updated"
-            @project.save
-        else 
-            render "edit"
-            flash[:notice] = "Nothing"
+            #@project.save
+        #else 
+            #render "edit"
+            #flash[:notice] = "Nothing"
         end
     end
     

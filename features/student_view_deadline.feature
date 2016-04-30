@@ -22,7 +22,7 @@ Scenario: student will add and view deadlines
     When I fill in "Email" with "student@email.com"
     When I fill in "Password" with "password"
     And I press "Log in"
-    When I follow "My Deadlines"
+    When I follow "Show My Deadlines"
     Then I should see "My Deadlines"
     When I follow "Create Deadline"
     Then I should see "Create New Deadline"

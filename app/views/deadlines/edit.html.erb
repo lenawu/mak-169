@@ -1,7 +1,21 @@
-%h1 Editing deadline
+<div class="padding-right">
+<h1>Edit Deadline</h1>
+<%= form_for :deadline do |i| %>
 
-= render 'form'
-
-= link_to 'Show', @deadline
-\|
-= link_to 'Back', deadlines_path
+    <%= i.label :deadline_title, "Title" %>
+    <%= i.text_field :deadline_title %><br>
+    
+    <%= i.label :start_date, "Start Date" %>
+    <%= i.text_field :start_date %><br>
+    
+    <%= i.label :end_date, "End Date" %>
+    <%= i.text_field :end_date %><br>
+    
+    <%= i.label :explanation, "Explanation" %>
+    <%= i.text_field :explanation %><br>
+    
+    <%= i.submit "Save", class: "btn btn-primary" %>
+<% end %>
+    
+    
+</div>

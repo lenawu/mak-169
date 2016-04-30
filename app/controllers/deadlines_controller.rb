@@ -14,6 +14,25 @@ class DeadlinesController < ApplicationController
       redirect_to deadlines_path
     end
   end
+  
+  def edit
+    @deadline = Deadline.find(params[:id])
+  end
+  
+  def update
+    @user = current_user
+    @deadline = @user.deadlines.find(params[:id])
+    if @deadline.update_attributes(deadline_params)
+      @deadline.update(deadline_params)
+      flash[:notice] = "Deadlines updated"
+      @deadline.save
+      redirect_to deadline_path(@deadline)
+      #@deadline.save
+    #else
+      #render "edit"
+      #flash[:notice] = "Deadline edit failed"
+    end
+  end
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.

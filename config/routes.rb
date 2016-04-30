@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get "deadlines/create" => "deadlines#create"
   post "deadlines/create" => "deadlines#create"
   get "deadlines" => "deadlines#index"
-  get "deadlines/:id" => "deadline#index"
+  get "deadlines/:id" => "deadlines#show", :as => :deadline
+  get "deadlines/:id/edit" => "deadlines#edit", :as => :edit_deadline
+  #post "deadlines/:id/edit" => "deadlines#edit"
+  post "deadlines/:id/edit" => "deadlines#update"
   
   devise_for :companies
   

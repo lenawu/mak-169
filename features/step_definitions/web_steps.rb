@@ -92,6 +92,30 @@ Given /^the user with email "([^"]*)" is assigned the project named "([^"]*)"$/ 
   user.projects << project
 end
 
+Given /^the following users, forums, messages, and projects are associated/ do |table|
+  table.hashes.each do |hash|
+    user = User.find_by(id: hash["user_id"])
+    forum = Forum.find_by(id: hash["forum_id"])
+    message = Message.find_by(id: hash["message_id"])
+    project = Project.find_by(id: hash["project_id"])
+    project.forum =forum
+    forum.messages << message
+    message.author = user.email
+    project.users << user
+  end
+end
+Given /^the following companies, forums, messages, and projects are associated/ do |table|
+  table.hashes.each do |hash|
+    company = Company.find_by(id: hash["company_id"])
+    forum = Forum.find_by(id: hash["forum_id"])
+    message = Message.find_by(id: hash["message_id"])
+    project = Project.find_by(id: hash["project_id"])
+    project.forum = forum
+    forum.messages << message
+    message.author = company.email
+    company.projects << project
+  end
+end
 Given /^I sign in with "([^"]*)" and "([^"]*)"$/ do |email, password|
   visit new_user_session_path
   step "I fill in the following:", table(%Q(

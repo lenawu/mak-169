@@ -15,7 +15,12 @@ Given the following forums exist:
 Given the following messages exist:
     | title | id | description           | forum_id| author             |
     | Hello | 1  |Just wanted to say hi  |1        | email@berkeley.com |
-Given the following projects exist
+Given the following projects exist:
+	| title           | description    | spec_urls  | proj_id   |
+	| Forum1          | cool proj      | url_1      | 1         |
+Given the following users, forums, messages, and projects are associated:
+    |user_id | forum_id | message_id | project_id |
+    | 1      | 1        |    1       |   1        |
 Scenario: There should be a bulletin board page
   Given I am on the home page
   When I follow "Sign In"
@@ -74,13 +79,27 @@ Scenario: Creating Comments
     Given I sign in with "email@berkeley.com" and "password1"
     And I am on the messageboard
     When I follow "Forum1"
-    Then I should see "Hello"
+    When I follow "Hello"
+    Then I should see "Comments"
+    When I fill in "Comment" with "I volunteer to do this project"
+    And I press "Create Comment"
+    Then I should see "I volunteer to do this project"
+
+Scenario: Editing and Deleting Comments
+    Given I sign in with "email@berkeley.com" and "password1"
+    And I am on the messageboard
+    When I follow "Forum1"
     When I follow "Hello"
     Then I should see "Comments"
     When I fill in "Comment" with "I volunteer to do this project"
     And I press "Create Comment"
     Then I should see "I volunteer to do this project"
     And I should see "Edit"
-    When I press "Edit"
+    When I follow "Edit"
     Then I should see "Edit Comment"
+    When I fill in "Comment" with "Jessica Alba"
+    And I press "Update Comment"
+    Then I should see "Jessica Alba"
+    When I follow "Delete"
+    Then I should see "No comments to display"
     

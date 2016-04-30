@@ -17,7 +17,7 @@ class ForumsController < ApplicationController
                 end
             end
         else
-            @projects = []
+            @forums = []
         end
     end
     

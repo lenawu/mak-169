@@ -1,14 +1,15 @@
-
-Feature: Students should be able to view the bulletin board
+@wip
+Feature: Companies should be able to view the bulletin board
     
-    As a student,
-    So that I can communicate with admins and companies,
+    As a company,
+    So that I can communicate with admins and students,
     I want to be able to access the bulletin board.  
     
 Background: Users exist
-Given the following users exist:
-    | email               | password  | id |
-	| email@berkeley.com  | password1 | 1  |
+Given the following companies exist:
+    |name   | email               | password  | id |
+	| Google| email@berkeley.com  | password1 | 1  |
+
 Given the following forums exist:
     | title | id|
     | Forum1| 1 |
@@ -18,27 +19,29 @@ Given the following messages exist:
 Given the following projects exist:
 	| title           | description    | spec_urls  | proj_id   |
 	| Forum1          | cool proj      | url_1      | 1         |
-Given the following users, forums, messages, and projects are associated:
-    |user_id | forum_id | message_id | project_id |
-    | 1      | 1        |    1       |   1        |
+Given the following companies, forums, messages, and projects are associated:
+    |company_id | forum_id | message_id | project_id |
+    | 1         | 1        |    1       |   1        |
 Scenario: There should be a bulletin board page
   Given I am on the home page
   When I follow "Sign In"
-  When I fill in "user[email]" with "email@berkeley.com"
-  When I fill in "user[password]" with "password1"
+  And I follow "Click here for companies"
+  When I fill in "company[email]" with "email@berkeley.com"
+  When I fill in "company[password]" with "password1"
   And I press "Log in"
-  Given I am on the dashboard 
+  Then I should see "ASDFASAS"
+  Then I should be on the dashboard 
   Then I should see "Message Board"
   When I follow "Message Board"
   Then I should see "Message Board"
     
 Scenario: Viewing Forums
-    Given I sign in with "email@berkeley.com" and "password1"
+    Given I sign in as a company with email "email@berkeley.com" and password "password1"
     And I am on the messageboard
     Then I should see "Forum1"
     
 Scenario: Viewing and Creating Messages
-    Given I sign in with "email@berkeley.com" and "password1"
+    When I sign in as a company with email "email@berkeley.com" and password "password1"
     And I am on the messageboard
     Then I should see "Forum1"
     When I follow "Forum1"
@@ -53,7 +56,7 @@ Scenario: Viewing and Creating Messages
     And I should see "this is the description"
 
 Scenario: Editing and Deleting Messages
-    Given I sign in with "email@berkeley.com" and "password1"
+    When I sign in as a company with email "email@berkeley.com" and password "password1"
     And I am on the messageboard
     When I follow "Forum1"
     Then I should see "Messages"
@@ -76,7 +79,7 @@ Scenario: Editing and Deleting Messages
     And I should not see "Bye"
     
 Scenario: Creating Comments
-    Given I sign in with "email@berkeley.com" and "password1"
+    When I sign in as a company with email "email@berkeley.com" and password "password1"
     And I am on the messageboard
     When I follow "Forum1"
     When I follow "Hello"
@@ -86,7 +89,7 @@ Scenario: Creating Comments
     Then I should see "I volunteer to do this project"
 
 Scenario: Editing and Deleting Comments
-    Given I sign in with "email@berkeley.com" and "password1"
+    When I sign in as a company with email "email@berkeley.com" and password "password1"
     And I am on the messageboard
     When I follow "Forum1"
     When I follow "Hello"

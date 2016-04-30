@@ -28,6 +28,7 @@ class MessagesController < ApplicationController
         @forum = Forum.find(params[:forum_id])
         @message = @forum.messages.find(params[:id])
     end
+    
     def update
         @forum = Forum.find(params[:forum_id])
         @message = @forum.messages.find(params[:id])

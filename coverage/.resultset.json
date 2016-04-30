@@ -118,7 +118,11 @@
         null,
         null,
         1,
+<<<<<<< HEAD
+        27,
+=======
         28,
+>>>>>>> c615231ae073eae6439fadcd4e927b69a02eec46
         null,
         null
       ],
@@ -226,8 +230,13 @@
         null,
         null,
         1,
+<<<<<<< HEAD
+        0,
+        0,
+=======
         2,
         2,
+>>>>>>> c615231ae073eae6439fadcd4e927b69a02eec46
         null,
         null,
         1,
@@ -408,6 +417,7 @@
         1,
         null
       ],
+
       "/home/ubuntu/workspace/mak-169/app/controllers/deadlines_controller.rb": [
         1,
         null,

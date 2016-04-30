@@ -59,6 +59,20 @@ Given /the following projects exist:/ do |projects_table|
   end
 end
 
+Given /the following forums exist:/ do |forums_table|
+  forums_table.hashes.each do |forum|
+    # each returned element will be a hash whose key is the table header.
+    p = Forum.create!({:title => forum["title"], :id => forum["id"]})
+  end
+end
+
+Given /the following messages exist:/ do |messages_table|
+  messages_table.hashes.each do |message|
+    # each returned element will be a hash whose key is the table header.
+    p = Message.create!({:title => message["title"], :forum_id => message["forum_id"], :description => message["description"], :id => message["id"] , :author => message["author"]})
+  end
+end
+
 Given /the following companies exist:/ do |companies_table|
   companies_table.hashes.each do |company|
     # each returned element will be a hash whose key is the table header.
@@ -78,6 +92,30 @@ Given /^the user with email "([^"]*)" is assigned the project named "([^"]*)"$/ 
   user.projects << project
 end
 
+Given /^the following users, forums, messages, and projects are associated/ do |table|
+  table.hashes.each do |hash|
+    user = User.find_by(id: hash["user_id"])
+    forum = Forum.find_by(id: hash["forum_id"])
+    message = Message.find_by(id: hash["message_id"])
+    project = Project.find_by(id: hash["project_id"])
+    project.forum =forum
+    forum.messages << message
+    message.author = user.email
+    project.users << user
+  end
+end
+Given /^the following companies, forums, messages, and projects are associated/ do |table|
+  table.hashes.each do |hash|
+    company = Company.find_by(id: hash["company_id"])
+    forum = Forum.find_by(id: hash["forum_id"])
+    message = Message.find_by(id: hash["message_id"])
+    project = Project.find_by(id: hash["project_id"])
+    project.forum = forum
+    forum.messages << message
+    message.author = company.email
+    company.projects << project
+  end
+end
 Given /^I sign in with "([^"]*)" and "([^"]*)"$/ do |email, password|
   visit new_user_session_path
   step "I fill in the following:", table(%Q(

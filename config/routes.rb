@@ -6,8 +6,12 @@ Rails.application.routes.draw do
   get "deadlines/:id" => "deadline#index"
   
   devise_for :companies
+  
   get 'projects/create' => 'projects#create'
-
+  get 'projects/:id/edit' => 'projects#edit', :as => :edit_project
+  post 'projects/:id/edit' => 'projects#edit'
+  get 'projects' => 'projects#index'
+  get 'projects/:id' => 'projects#show', :as => :project
   post 'projects/create' => "projects#create"
   #   resources :products do
   #     member do
@@ -43,8 +47,6 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show', :as => :user
   
   get 'users' => 'users#index'
-  get 'projects' => 'projects#index'
-  get 'projects/:id' => 'projects#show', :as => :project
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

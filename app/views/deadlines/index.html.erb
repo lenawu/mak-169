@@ -21,6 +21,8 @@
         <td><%= deadline.end_date %></td>
         <td><%= deadline.explanation %></td>
         <td><%= deadline.status %></td>
+        
+        <td><%= link_to "Edit", edit_deadline_path(deadline), class:"button" %></td>
       </tr>
     <% end %>
   <% end %>

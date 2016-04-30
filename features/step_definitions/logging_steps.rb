@@ -9,10 +9,6 @@ Given /^I am currently on (.+)$/ do |page_name|
     visit path_to(page_name)
 end
 
-Given /^I am on the project page$/ do
-    visit path_to(projects)
-end
-
 Given /I should be logged in$/ do
     # if page.respond_to? :should
     #     page.should have_content("Log out")

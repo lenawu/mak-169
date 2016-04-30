@@ -58,4 +58,26 @@ class ProjectsController < ApplicationController
         @project.users << @user
         redirect_to project_path(@project)
     end
+
+    def edit
+        # @company = Company.find(params[:id])
+        @project = Project.find(params[:id])
+    end
+    
+    def update 
+        # @company = Company.find(params[:forum_id])
+        @project = @company.project.find(params[:id])
+        @project.assign_attributes(post_params)
+        if @project.update_attributes(project_params)
+            # redirect_to project_path(@project)
+            @project.update(project_params)
+            redirect_to project_path(@project)
+            # flash[:success] = "Profile updated"
+            @project.save
+        else 
+            render "edit"
+            flash[:notice] = "Nothing"
+        end
+    end
+    
 end

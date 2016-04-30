@@ -39,6 +39,9 @@ module NavigationHelpers
       
     when /^the projects index$/
       '/projects'
+      
+    when /^the create project page$/
+      '/projects/create'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

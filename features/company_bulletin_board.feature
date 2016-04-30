@@ -1,4 +1,4 @@
-@wip
+
 Feature: Companies should be able to view the bulletin board
     
     As a company,
@@ -29,19 +29,28 @@ Scenario: There should be a bulletin board page
   When I fill in "company[email]" with "email@berkeley.com"
   When I fill in "company[password]" with "password1"
   And I press "Log in"
-  Then I should see "ASDFASAS"
   Then I should be on the dashboard 
   Then I should see "Message Board"
   When I follow "Message Board"
   Then I should see "Message Board"
     
 Scenario: Viewing Forums
-    Given I sign in as a company with email "email@berkeley.com" and password "password1"
+    Given I am on the home page
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    When I fill in "company[email]" with "email@berkeley.com"
+    When I fill in "company[password]" with "password1"
+    And I press "Log in"
     And I am on the messageboard
     Then I should see "Forum1"
     
 Scenario: Viewing and Creating Messages
-    When I sign in as a company with email "email@berkeley.com" and password "password1"
+    Given I am on the home page
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    When I fill in "company[email]" with "email@berkeley.com"
+    When I fill in "company[password]" with "password1"
+    And I press "Log in"
     And I am on the messageboard
     Then I should see "Forum1"
     When I follow "Forum1"
@@ -56,7 +65,12 @@ Scenario: Viewing and Creating Messages
     And I should see "this is the description"
 
 Scenario: Editing and Deleting Messages
-    When I sign in as a company with email "email@berkeley.com" and password "password1"
+    Given I am on the home page
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    When I fill in "company[email]" with "email@berkeley.com"
+    When I fill in "company[password]" with "password1"
+    And I press "Log in"
     And I am on the messageboard
     When I follow "Forum1"
     Then I should see "Messages"
@@ -79,7 +93,12 @@ Scenario: Editing and Deleting Messages
     And I should not see "Bye"
     
 Scenario: Creating Comments
-    When I sign in as a company with email "email@berkeley.com" and password "password1"
+    Given I am on the home page
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    When I fill in "company[email]" with "email@berkeley.com"
+    When I fill in "company[password]" with "password1"
+    And I press "Log in"
     And I am on the messageboard
     When I follow "Forum1"
     When I follow "Hello"
@@ -89,7 +108,12 @@ Scenario: Creating Comments
     Then I should see "I volunteer to do this project"
 
 Scenario: Editing and Deleting Comments
-    When I sign in as a company with email "email@berkeley.com" and password "password1"
+    Given I am on the home page
+    When I follow "Sign In"
+    And I follow "Click here for companies"
+    When I fill in "company[email]" with "email@berkeley.com"
+    When I fill in "company[password]" with "password1"
+    And I press "Log in"
     And I am on the messageboard
     When I follow "Forum1"
     When I follow "Hello"

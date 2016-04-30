@@ -1,0 +1,16 @@
+<div class="padding-right">
+<h1>Edit Project</h1>
+<%= form_for :project do |f| %>
+
+ <%= f.label :title, 'Title' %>
+ <%= f.text_field :title %><br>
+
+ <%= f.label :description, 'Description' %>
+ <%= f.text_field :description %><br>
+
+ <%= f.label :spec_urls, 'Spec URL' %>
+ <%= f.text_field :spec_urls %><br>
+ 
+ <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>
+</div>

@@ -25,7 +25,6 @@ Scenario: viewing all projects as admin
   Then I should see "foobar"
   Then I should see "a cool proj"
   Then I should see "elephant"
-  Then I should see "rob"
   And I follow "Log Out"
     
 Scenario: viewing all projects as a visitor

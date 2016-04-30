@@ -1,4 +1,3 @@
-
 Feature: Students should be able to view the bulletin board
     
     As a student,

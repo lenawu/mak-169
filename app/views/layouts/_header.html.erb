@@ -1,32 +1,25 @@
 		<header>
-			<div class="container">
-				<div class="row">
-				  <%= link_to root_path do %>
-					  <div class="responsive-logo"></div>
-					<% end %>
-					<div class="pullcontainer">
-						<a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-offset-2">
-						<nav>
-						 <!-- <%= link_to root_path do %>-->
-						 <a href="/">
-						 	
-					      <div class="logo-holder"></div>
-						 </a>
-				    	<% end %>
+				<div class="hero">
+				<div class="container">
+				<div class="row-fluid">
+				    <nav>
+				    <div class="col-md-2">
+				   		<div class="logo-holder" style="padding:0; left:0;"></div>
+				    </div>
+					<div class="col-md-offset-5" style="float:right; margin-left:0;">
+						
 							<ul class="clearfix">
-							  <% if user_signed_in? or company_signed_in? %>
+							  <!--<% if user_signed_in? or company_signed_in? %>
 							    <li><%= link_to "Projects", projects_path, class: "page-link"%></li>
 							    <li class="dot">.</li>
 							    <li><%= link_to "Dashboard", info_dashboard_path, class: "page-link"%></li>
-                			  <%else%>
+                			  <%else%>-->
+
+								<li> <%= link_to "Home", root_path, class: "page-link" %></li>
                 			    <li> <%= link_to "About Us", info_about_path, class: "page-link"%></li>
-								<li class="dot">.</li>
-								<li><%= link_to "Contact", new_contact_path, class: "page-link r_spacer"%></li>
-                			  <% end %>
+								<li> <%= link_to "Contact", new_contact_path, class: "page-link"%></li>
+								<li> <%= link_to "Donate", new_contact_path, class: "page-link"%></li>
+                			  <!--<% end %>
                 			  <% if user_signed_in? %>
                   				<li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "page-link" %></li>
                   				<li class="dot">.</li>
@@ -39,10 +32,11 @@
                   				<li><%= link_to "Sign In", new_user_session_path, class: "page-link" %></li>
                   				<li class="dot">.</li>
                   				<li><%= link_to "Sign Up", new_user_registration_path, class: "page-link r_spacer" %></li>
-							  <% end %>
+							  <% end %>-->
 							</ul>
+						</div>
 						</nav>
 					</div>
 				</div>
-			</div>
+			  </div>
 		</header>

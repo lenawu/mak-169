@@ -300,3 +300,63 @@ table td, table th { padding: 5px; }
 .success-color { color: rgb(28, 184, 65); }
 .underline { text-decoration: underline; }
 .underline:hover { text-decoration: underline; }
+
+.circular-ankita {
+	background-position: center; 
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: image-url("Ankita.jpg") no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+
+
+.circular-aubrey {
+	background-position: center; 
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: image-url("Aubrey.jpg") no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+
+.circular-michelle {
+	background-position: center; 
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: image-url("Michelle.jpg") no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+
+
+.jumbotron {
+   vertical-align: middle;  
+}
+
+.modal-jumbos {
+	min-height: 500px;
+}
+
+.founder-jumbos {
+	min-height: 1000px;
+}
+
+.bolder-print {
+	color: #0f0f0a;
+}

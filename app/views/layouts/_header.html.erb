@@ -1,24 +1,23 @@
 		<header>
 				<div class="hero">
-				<div class="container">
 				<div class="row-fluid">
-				    <nav>
+					<!-- used to have a nav and a container class. Keep that in mind -->
 				    <div class="col-md-2">
-				   		<div class="logo-holder" style="padding:0; left:0;"></div>
+				   		<div class="logo-holder" style="padding:0; left:5px;"></div>
 				    </div>
-					<div class="col-md-offset-5" style="float:right; margin-left:0;">
+					<div class="col-md-10" style=" padding-left:40%; padding-top:0; margin-left:0;">
 						
-							<ul class="clearfix">
+							<ul class="clearfix" style="color:#ffffe6;">
 							  <!--<% if user_signed_in? or company_signed_in? %>
 							    <li><%= link_to "Projects", projects_path, class: "page-link"%></li>
 							    <li class="dot">.</li>
 							    <li><%= link_to "Dashboard", info_dashboard_path, class: "page-link"%></li>
                 			  <%else%>-->
 
-								<li> <%= link_to "Home", root_path, class: "page-link" %></li>
-                			    <li> <%= link_to "About Us", info_about_path, class: "page-link"%></li>
-								<li> <%= link_to "Contact", new_contact_path, class: "page-link"%></li>
-								<li> <%= link_to "Donate", new_contact_path, class: "page-link"%></li>
+								<li class="light-header" style="color:#ffffe6;"> <%= link_to "Home", root_path, class: "page-link"%></li>
+                			    <li class="light-header" style="color:#ffffe6;"> <%= link_to "About Us", info_about_path, class: "page-link"%></li>
+								<li class="light-header" style="color:#ffffe6;"> <%= link_to "Contact", new_contact_path, class: "page-link"%></li>
+								<li class="light-header" style="color:#ffffe6;"> <%= link_to "Donate", new_contact_path, class: "page-link"%></li>
                 			  <!--<% end %>
                 			  <% if user_signed_in? %>
                   				<li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "page-link" %></li>
@@ -35,8 +34,6 @@
 							  <% end %>-->
 							</ul>
 						</div>
-						</nav>
 					</div>
-				</div>
 			  </div>
 		</header>

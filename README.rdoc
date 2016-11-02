@@ -52,4 +52,6 @@ git merge may open nano. Just ctrl-X to exit and finish the merge.
 
 "Address already in use - bind(2) for 0.0.0.0:8080"
 * Fix: run 'fuser -k 8080/tcp'
-    
+
+
+rvm use 2.2.2@mak_rails

@@ -57,6 +57,8 @@ $(document).ready(function() {
       $(this).removeClass("hover");
     });
   }
+  
+  $(".owl-carousel").owlCarousel();
 });
 
 

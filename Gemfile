@@ -28,6 +28,10 @@ gem 'devise'
 # Annotate models with the attributes available to them
 gem 'annotate'
 
+# Gem for Owl Carousel
+
+gem 'owlcarousel-rails'
+
 gem 'haml-rails'
 gem 'simple_form'
 # Use ActiveModel has_secure_password

@@ -59,7 +59,7 @@ $(document).ready(function() {
   }
   
   var sync1 = $("#sync1");
-  var sync1 = $("#sync2");
+  var sync2 = $("#sync2");
   
   
   sync1.owlCarousel({
@@ -99,7 +99,7 @@ $(document).ready(function() {
   function center(number){
     var sync1visible = sync1.data("owlCarousel").owl.visibleItems;
     var num = number;
-    sync1.trigger("owl.goTo",number);
+    //sync1.trigger("owl.goTo",number);
     var found = false;
     for(var i in sync1visible) {
       if(num === sync1visible[i]) {
@@ -122,6 +122,7 @@ $(document).ready(function() {
       sync1.trigger("owl.goTo", num-1)
     }
   }
+});
 
   
   
@@ -143,7 +144,6 @@ $(document).ready(function() {
      //}
    //});
   
-});
 
 
 

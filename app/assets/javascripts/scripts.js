@@ -58,8 +58,95 @@ $(document).ready(function() {
     });
   }
   
-  $(".owl-carousel").owlCarousel();
+  var sync1 = $("#sync1");
+  var sync1 = $("#sync2");
+  
+  
+  sync1.owlCarousel({
+    items: 5,
+    pagination: false,
+    responsiveRefreshRate : 100,
+    afterInit : function(el){
+      el.find(".owl-item").eq(0).addClass("synced");
+    }
+  });
+  
+  sync2.owlCarousel({
+    singleItem : true,
+    slideSpeed : 1000,
+    navigation: true,
+    pagination:false,
+    afterAction : syncPosition,
+    responsiveRefreshRate : 200,
+   });
+   
+   function syncPosition(el){
+     var current = this.currentItem;
+     $("#sync1").find(".owl-item").removeClass("synced").eq(current).addClass("synced")
+     if($("#sync1").data("owlCarousel") !== undefined){
+       center(current)
+     }
+   }
+   
+    $("#sync1").on("click", ".owl-item", function(e){
+      e.preventDefault();
+      var number = $(this).data("ownItem");
+      sync2.trigger("owl.goTo", number);
+     });
+     
+     
+  
+  function center(number){
+    var sync1visible = sync1.data("owlCarousel").owl.visibleItems;
+    var num = number;
+    sync1.trigger("owl.goTo",number);
+    var found = false;
+    for(var i in sync1visible) {
+      if(num === sync1visible[i]) {
+        var found = true;
+      }
+    }
+    if( found === false ){
+      if(num>sync1visible[sync1visible.length -1]) {
+        sync1.trigger("owl.goTo", num - (sync1visible.length + 2))
+      }
+      else{
+        if(num - 1 === -1) {
+          num = 0;
+        }
+        sync1.trigger("owl.goTo", num);
+      }
+    } else if(num === sync1visible[sync1visible.length - 1]){
+      sync1.trigger(("owl.goTo", sync1visible[1]))
+    } else if(num === sync1visible[0]){
+      sync1.trigger("owl.goTo", num-1)
+    }
+  }
+
+  
+  
+  //$("#details").owlCarousel({
+  //  items : 1
+  //});
+  
+//  $("#heads").owlCarousel({
+  //  items: 5
+  //});
+  
+   //$('.link').on('click', function(event){
+    // var $this = $(this);
+     //if($this.hasClass('clicked')){
+       
+     //}
+     //else{
+       
+     //}
+   //});
+  
 });
+
+
+
 
 
 // SMOOTH NAV SCROLL 

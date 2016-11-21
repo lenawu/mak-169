@@ -63,7 +63,10 @@ $(document).ready(function() {
   
   
   sync1.owlCarousel({
-    items: 5,
+    items: 7,
+    itemsDesktop : [700,6], //5 items between 1000px and 901px
+    itemsDesktopSmall : [500,4], // betweem 900px and 601px
+    itemsTablet: [400,2], //2 items between 600 and 0
     pagination: false,
     responsiveRefreshRate : 100,
     afterInit : function(el){
@@ -90,7 +93,7 @@ $(document).ready(function() {
    
     $("#sync1").on("click", ".owl-item", function(e){
       e.preventDefault();
-      var number = $(this).data("ownItem");
+      var number = $(this).data("owlItem");
       sync2.trigger("owl.goTo", number);
      });
      

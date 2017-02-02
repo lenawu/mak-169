@@ -418,6 +418,7 @@ table td, table th { padding: 5px; }
 
 .modal-jumbos {
 	min-height: 550px;
+	max-width: 100%;
 }
 
 .founder-jumbos {
@@ -432,7 +433,7 @@ table td, table th { padding: 5px; }
 	color:  #ffffe6;
 }
 
-light-header {
+.light-header {
   color:  #ffffe6;
   font-weight: bold;
 }
@@ -441,6 +442,11 @@ a.news:link {
 	color: #00008B;
 }
 
+.four-boxes {
+	width: 300px;
+	max-width: 100%;
+    height: 250px;
+}
 
 .caption{
     left: 25%;

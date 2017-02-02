@@ -27,13 +27,13 @@
 </div>
 </div>
 
-<div class="container">
-<div class="row">
+<div class="container-fluid">
+<div class="row-fluid">
 	<h1> Get Involved </h1>
 
-	<div class="col-xs-6 col-md-6">
+	<div class="col-xs-12 col-md-6">
 	  <div class="jumbotron modal-jumbos" style="text-align:center;">
-	    <%= image_tag("students.jpg", size: "300x250", :alt => "students") %>
+	    <%= image_tag("students.jpg", :class => "four-boxes", :alt => "students") %>
 		<p class="bolder-print">Students: We provide extensive, personalized training in 3D design and CAD to high school students in the Bay Area. 
 		<a class="news" data-target="#studentModal" data-toggle="modal" href="#">Read More</a></p>
 
@@ -60,7 +60,7 @@
 		</div>
 
 	  <div class = "jumbotron modal-jumbos" style="text-align:center;">
-	    <%= image_tag("student_mentor.jpg", size: "300x250", :alt => "mentors") %>
+	    <%= image_tag("student_mentor.jpg", size: "300x250", :class => "four-boxes", :alt => "mentors") %>
 		<p class="bolder-print">Mentors: We provide a community of engaged and passionate UC Berkeley students skilled in CAD. <a class="news" data-target="#mentorModal" data-toggle="modal" href="#">Read More</a></p>
 		<!-- Modal -->
 		  <div class="modal fade" id="mentorModal" role="dialog">
@@ -86,9 +86,9 @@
 	</div>
 
 
-	<div class="col-xs-6 col-md-6">
+	<div class="col-xs-12 col-md-6">
 	  <div class="jumbotron modal-jumbos" style="text-align:center;">
-	    <%= image_tag("graduation.jpg", size: "300x250", :alt => "graduation") %>
+	    <%= image_tag("graduation.jpg", size: "300x250", :class => "four-boxes", :alt => "graduation") %>
 		<p class="bolder-print">Businesses: Māk can help you complete high-quality 3D design projects, whether you work for a startup or a research lab. <a class="news" data-target="#businessModal" data-toggle="modal" href="#">Read More</a></p> 
 
 		<!-- Modal -->
@@ -114,7 +114,7 @@
 	  </div>
 
 	  <div class="jumbotron modal-jumbos" style="text-align:center;">
-	    <%= image_tag("oaklandtech.jpg", size: "300x250", :alt => "oaklandtech") %>
+	    <%= image_tag("oaklandtech.jpg", size: "300x250", :class => "four-boxes", :alt => "oaklandtech") %>
 		<p class="bolder-print">We are currently partnering with the Oakland Technical High School’s Fashion, Art, and Design Academy.<a class="news" data-target="#schoolModal" data-toggle="modal" href="#">Read More</a></p>
 
 
@@ -136,7 +136,7 @@
 		      </div>
 		      
 		    </div>
-		  </div>
+	  </div>
 	  </div>
 	  </div>
 	</div>

@@ -54,6 +54,10 @@ git merge may open nano. Just ctrl-X to exit and finish the merge.
 * Fix: run 'fuser -k 8080/tcp'
 
 
-rvm use 2.2.2@mak_rails
 
- rails s -p $PORT -b $IP
+== Using Command Line Tools
+
+Set up your gem file using
+    Use     "rvm use 2.2.2@mak_rails"  to be able to use the right version of rails for this application
+
+    USe     "rails s -p $PORT -b $IP"  To run the server and see what's happening locally. 

@@ -1,0 +1,23 @@
+== Purpose
+
+    To provide a step-by-step tutorial for updating the front-end of the application.
+    
+== The Terminal
+
+    1.  Before anything make sure you have the right version of rails but entering this command:
+        "rvm use 2.2.2@mak_rails"
+    2. Open a second Terminal for git updates
+    3. Use "git pull"   to make sure you have all the latest updates locally.
+    4. To view what's going on with what you're updating run this command and open the address that pops up.
+        "rails s -p $PORT -b $IP" in the terminal where you set your version of rails.
+
+== Modifying the Website and Git
+    
+    1. The html files are located in:
+        app > views > info
+    2. After modifying what you want be sure to commit your changes:
+        "git add -A"  Adds your changes to the magic package you're sending
+        "git commit -a -m '[what you're uploading]'" Gets the package ready for deliver
+    3.  After committing, which is hard :'(, you just push to upload your changes.
+        "git push origin master" adds your changes to github
+        "git push heroku master" uploads your changes to the website!

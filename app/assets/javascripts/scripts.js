@@ -168,7 +168,7 @@ $(document).ready(function() {
   });
  
   sync2.owlCarousel({
-    items : 15,
+    items : 6,
     itemsDesktop      : [1199,10],
     itemsDesktopSmall     : [979,10],
     itemsTablet       : [768,8],

@@ -10,6 +10,7 @@
     3. Use "git pull"   to make sure you have all the latest updates locally.
     4. To view what's going on with what you're updating run this command and open the address that pops up.
         "rails s -p $PORT -b $IP" in the terminal where you set your version of rails.
+    5.RAILS_ENV=production bundle exec rake assets:precompile
 
 == Modifying the Website and Git
     
